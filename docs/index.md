@@ -4,9 +4,9 @@ layout: home
 hero:
   name: "WenQ"
   text: "闻家奇的个人文档站点"
-  tagline: wen7.online
+  tagline: Talk is Cheap,Show me the Code.
   image: 
-    src: /img.png
+    src: /home_img.png
     alt: 闻
   actions:
     - theme: brand
@@ -22,7 +22,7 @@ hero:
 features:
   - title: Java
     icon: 
-      src: /JAVA.svg
+      src: /home_feature_java.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: JavaScript
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit

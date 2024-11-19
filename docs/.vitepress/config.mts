@@ -6,13 +6,13 @@ export default defineConfig({
     description: "闻家奇的文档",
     lastUpdated: true,
     themeConfig: {
-        logo: './W.jpg',
-        siteTitle: '闻',
+        logo: './logo.jpg',
+        siteTitle: '闻家奇',
         search: {
             provider: 'local'
         },
         nav: [
-            {text: '闻', link: '/'},
+            {text: '首页', link: '/'},
             {
                 text: '前端', items: [
                     {text: 'Web', link: '/Html'},
@@ -54,5 +54,5 @@ export default defineConfig({
         //     code: 'your-carbon-code',
         //     placement: 'your-carbon-placement'
         // }
-    }
+    },
 })
