@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "WenQ"
-  text: "闻家奇的个人文档站点"
-  tagline: Talk is Cheap,Show me the Code.
+  text: "Talk is Cheap,Show me the Code."
+  tagline: 好记性不如烂笔头
   image: 
     src: /home_img.png
     alt: 闻
