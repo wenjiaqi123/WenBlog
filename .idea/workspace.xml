@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59a2fc9d-d226-484d-9462-f50490d44ec8" name="Changes" comment="导航栏 nav">
-      <change afterPath="$PROJECT_DIR$/docs/social_pay_alipay.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/social_pay_wechat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/public/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vitepress/config.mts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/config.mts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/social_wechat.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/social_wechat.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +41,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/node_modules/vitepress/dist/node/index.d.ts" root0="SKIP_INSPECTION" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -60,7 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "F:/xj/WenBlog/docs",
+    "last_opened_file_path": "F:/xj/WenBlog/docs/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,8 +81,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\xj\WenBlog\docs" />
       <recent name="F:\xj\WenBlog\docs\public" />
+      <recent name="F:\xj\WenBlog\docs" />
       <recent name="E:\VitePress\docs\public" />
       <recent name="E:\VitePress\docs\.vitepress" />
     </key>
@@ -129,7 +131,7 @@
       <workItem from="1731984741967" duration="3252000" />
       <workItem from="1731994549980" duration="1639000" />
       <workItem from="1731998496622" duration="37000" />
-      <workItem from="1731998541100" duration="4934000" />
+      <workItem from="1731998541100" duration="7849000" />
     </task>
     <task id="LOCAL-00001" summary="测试发布">
       <option name="closed" value="true" />
@@ -211,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732000264724</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="导航栏 nav">
+      <option name="closed" value="true" />
+      <created>1732004839549</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732004839549</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
