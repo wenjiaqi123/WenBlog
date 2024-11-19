@@ -4,7 +4,7 @@ export default defineConfig({
     lang: 'en-US',
     title: "Blog",
     titleTemplate:'闻',
-    description: "闻家奇的文档",
+    description: "闻家奇",
     head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
     lastUpdated: true,
     themeConfig: {

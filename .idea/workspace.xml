@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59a2fc9d-d226-484d-9462-f50490d44ec8" name="Changes" comment="导航栏 nav">
-      <change afterPath="$PROJECT_DIR$/docs/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vitepress/config.mts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/config.mts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +129,7 @@
       <workItem from="1731984741967" duration="3252000" />
       <workItem from="1731994549980" duration="1639000" />
       <workItem from="1731998496622" duration="37000" />
-      <workItem from="1731998541100" duration="7849000" />
+      <workItem from="1731998541100" duration="8055000" />
     </task>
     <task id="LOCAL-00001" summary="测试发布">
       <option name="closed" value="true" />
@@ -221,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732004839549</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="导航栏 nav">
+      <option name="closed" value="true" />
+      <created>1732013812331</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732013812331</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
