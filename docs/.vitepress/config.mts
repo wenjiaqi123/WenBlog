@@ -10,7 +10,7 @@ export default defineConfig({
     description: "闻家奇",
     head: [['link', {rel: 'icon', href: '/favicon.ico'}]],
     srcDir: './src',
-    appearance: 'dark',
+    appearance: true,
     lastUpdated: {
         text: '最后更新时间',
         timezone: 'Asia/Shanghai'

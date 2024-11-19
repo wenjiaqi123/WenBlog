@@ -1,6 +1,8 @@
 ---
 layout: home
 
+title: "Blog"
+
 hero:
   name: "WenQ"
   text: "Talk is Cheap,Show me the Code."

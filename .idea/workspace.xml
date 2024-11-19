@@ -6,21 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="59a2fc9d-d226-484d-9462-f50490d44ec8" name="Changes" comment="导航栏 nav">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/config.mts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/config.mts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HowUseVitePress.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/HowUseVitePress.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Html.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/Html.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/aa.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/aa.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/bb.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/bb.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cc.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/cc.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/db.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/db.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/dd.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/dd.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ee.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/ee.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/docs/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/social_pay_alipay.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/social/social_pay_alipay.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/social_pay_wechat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/social/social_pay_wechat.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/social_wechat.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/social/social_wechat.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +131,7 @@
       <workItem from="1731984741967" duration="3252000" />
       <workItem from="1731994549980" duration="1639000" />
       <workItem from="1731998496622" duration="37000" />
-      <workItem from="1731998541100" duration="11063000" />
+      <workItem from="1731998541100" duration="11528000" />
     </task>
     <task id="LOCAL-00001" summary="测试发布">
       <option name="closed" value="true" />
@@ -259,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732014779905</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="导航栏 nav">
+      <option name="closed" value="true" />
+      <created>1732017388387</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732017388387</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
