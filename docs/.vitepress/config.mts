@@ -9,7 +9,7 @@ export default defineConfig({
     titleTemplate: '闻',
     description: "闻家奇",
     head: [['link', {rel: 'icon', href: '/favicon.ico'}]],
-    srcDir: './src',
+    srcDir: 'src',      //配置了 srcDir,注意需要把类似 public 的文件夹放在 src 下
     appearance: true,
     lastUpdated: {
         text: '最后更新时间',
@@ -26,9 +26,7 @@ export default defineConfig({
      */
     themeConfig: {
         i18nRouting: true,
-        logo: {
-            src: './logo.jpg',
-        },
+        logo: '/logo.jpg',
         siteTitle: '闻家奇',
         search: {
             provider: 'local'
