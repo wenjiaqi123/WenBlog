@@ -1,14 +1,34 @@
 import {defineConfig} from 'vitepress'
 
 export default defineConfig({
-    lang: 'en-US',
+    /**
+     * 站点配置
+     */
+    lang: 'zh',
     title: "Blog",
-    titleTemplate:'闻',
+    titleTemplate: '闻',
     description: "闻家奇",
-    head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
-    lastUpdated: true,
+    head: [['link', {rel: 'icon', href: '/favicon.ico'}]],
+    srcDir: './src',
+    appearance: 'dark',
+    lastUpdated: {
+        text: '最后更新时间',
+        timezone: 'Asia/Shanghai'
+    },
+    markdown: {
+        lineNumbers: true,
+    },
+    vite: {},
+    vue: {},
+
+    /**
+     * 默认主题配置
+     */
     themeConfig: {
-        logo: './logo.jpg',
+        i18nRouting: true,
+        logo: {
+            src: './logo.jpg',
+        },
         siteTitle: '闻家奇',
         search: {
             provider: 'local'
@@ -69,12 +89,20 @@ export default defineConfig({
             },
             {
                 text: '运维', items: [
-                    {text: 'Linux', link: '/Html'},
-                    {text: 'Shell', link: '/Html'},
-                    {text: 'Docker', link: '/Html'},
-                    {text: 'Jenkins', link: '/Html'},
-                    {text: 'Kubernetes', link: '/markdown-examples'},
-                ]
+                    {
+                        items: [
+                            {text: 'Linux', link: '/Html'},
+                            {text: 'Shell', link: '/Html'},
+                        ]
+                    },
+                    {
+                        items: [
+                            {text: 'Docker', link: '/Html'},
+                            {text: 'Jenkins', link: '/Html'},
+                            {text: 'Kubernetes', link: '/markdown-examples'}
+                        ]
+                    }
+                ],
             },
             {
                 text: '组件', items: [
@@ -94,9 +122,17 @@ export default defineConfig({
             },
             {
                 text: '项目', items: [
-                    {text: 'BaoBaoQiMing', link: '/Html'},
-                    {text: 'ZhaoGuiLv', link: '/Html'},
-                    {text: 'Admin', link: '/Html'},
+                    {
+                        items: [
+                            {text: 'BaoBaoQiMing', link: '/Html'},
+                            {text: 'ZhaoGuiLv', link: '/Html'},
+                        ]
+                    },
+                    {
+                        items: [
+                            {text: 'Admin', link: '/Html'},
+                        ]
+                    }
                 ]
             },
             {
@@ -126,13 +162,13 @@ export default defineConfig({
         },
 
         socialLinks: [
-            {icon: 'wechat', link: '/social_wechat'},
+            {icon: 'wechat', link: '/social/social_wechat'},
             {icon: 'github', link: 'https://github.com/wenjiaqi123'},
             {icon: 'gitee', link: 'https://gitee.com/wjq303812'},
             {icon: 'csdn', link: 'https://blog.csdn.net/Wen_J_Q'}
         ],
 
-        // returnToTopLabel: "返回顶部",
+        returnToTopLabel: "返回顶部",
         footer: {
             message: 'Released under the MIT License',
             copyright: 'Copyright © wen7'
