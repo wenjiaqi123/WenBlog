@@ -11,7 +11,7 @@
 <img src="../pic/3.jpg" style="width:200px">
 ```
 
-![image-20210730153546058](http://xyb.wyxjava.com/image-20210730153546058.png)
+![image-20210730153546058](https://attach.blog.wen7.online/image-20210730153546058.png)
 
 目录结构：
 
@@ -70,4 +70,4 @@ index.html 和 2.jpg 的位置,index.html 的父目录的父目录，demo 目录
 
 - alt		当图片无法正常显示的时候，显示给用户看的文字
 
-    ![image-20210730155135426](http://xyb.wyxjava.com/image-20210730155135426.png)
+    ![image-20210730155135426](https://attach.blog.wen7.online/image-20210730155135426.png)

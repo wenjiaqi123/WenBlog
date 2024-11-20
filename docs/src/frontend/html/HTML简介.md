@@ -38,7 +38,7 @@ HTML：超文本标记语言  **H**yper **T**ext **M**arkup **L**anguage
 <!DOCTYPE html>    标识这是一个 html 文档
 ```
 
-<img src="http://xyb.wyxjava.com/image-20210730122939873.png" alt="image-20210730122939873" style="zoom:118%;" />
+<img src="https://attach.blog.wen7.online/image-20210730122939873.png" alt="image-20210730122939873" style="zoom:118%;" />
 
 ==只有 body 标签里的内容会展示在页面上==
 

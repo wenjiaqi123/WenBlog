@@ -4,7 +4,7 @@
 
 ## form
 
-![image-20210730155946846](http://xyb.wyxjava.com/image-20210730155946846.png)
+![image-20210730155946846](https://attach.blog.wen7.online/image-20210730155946846.png)
 
 ```html
 <form method="get" action="http://localhost:8080/test" enctype="multipart/form-data">
@@ -32,7 +32,7 @@ form 表单的 3 个属性：
 
 ## input
 
-![image-20210730163722645](http://xyb.wyxjava.com/image-20210730163722645.png)
+![image-20210730163722645](https://attach.blog.wen7.online/image-20210730163722645.png)
 
 ```html
 <form method="get" action="http://localhost:8080/test" enctype="multipart/form-data">

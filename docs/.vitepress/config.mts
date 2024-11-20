@@ -1,4 +1,5 @@
 import {defineConfig} from 'vitepress'
+import {set_sidebar} from './utils/generate_sidebar'
 
 export default defineConfig({
     /**
@@ -15,28 +16,34 @@ export default defineConfig({
     lastUpdatedText: '最后更新时间',
     markdown: {         //配置 markdown
         lineNumbers: true,      //开启行号
+        image: {
+            lazyLoading: true,  //开启图片懒加载
+        }
     },
     vite: {},
     vue: {},
+
+
     /**
      * 默认主题配置
      */
     themeConfig: {
-        i18nRouting: true,
-        logo: '/logo.jpg',
-        siteTitle: '闻家奇',
-        search: {
+        i18nRouting: true,      //开启国际化路由,需要添加多语言配置
+        logo: '/logo.jpg',      //配置 logo,logo 放在 public 文件夹下
+        siteTitle: '闻家奇',     //配置 logo 后面的站点标题
+        search: {               //开启搜索
             provider: 'local'
         },
         darkModeSwitchLabel: "深浅模式",
         nav: [
             {text: '首页', link: '/'},
+            {text: 'guide', link: '/guide'},
             {
                 text: '前端', items: [
                     {
                         items: [
-                            {text: 'HTML', link: '/Html'},
-                            {text: 'CSS', link: '/Html'},
+                            {text: 'HTML', link: '/html'},
+                            {text: 'CSS', link: '/frontend/css'},
                             {text: 'JavaScript', link: '/Html'}
                         ]
                     },
@@ -99,7 +106,7 @@ export default defineConfig({
                 text: '数据库', items: [
                     {
                         items: [
-                            {text: 'MySQL', link: '/Html'},
+                            {text: 'MySQL', link: '/database/mysql/01240_DML_查询'},
                             {text: 'Redis', link: '/markdown-examples'},
                             {text: 'Postgresql', link: '/Html'},
                         ]
@@ -187,13 +194,13 @@ export default defineConfig({
                     },
                     {
                         items: [
-                            {text: 'GIS', link: '/Html'},
+                            {text: '国家编号', link: 'https://baobaoqiming.wen7.online'},
+                            {text: '行政编号', link: 'https://zhaoguilv.wen7.online'},
                         ]
                     },
                     {
                         items: [
-                            {text: '国家编号', link: 'https://baobaoqiming.wen7.online'},
-                            {text: '行政编号', link: 'https://zhaoguilv.wen7.online'},
+                            {text: 'GisOnline', link: '/Html'},
                         ]
                     },
                     {
@@ -209,24 +216,35 @@ export default defineConfig({
                     },
                     {
                         items: [
-                            {text: '关于本站', link: '/Html'},
+                            {text: '关于本站', link: '/other/aboutMe'},
                         ]
                     }
                 ]
             },
         ],
 
+
         sidebar: {
-            '/Html': [
+            '/guide': [
                 {
-                    text: "HTML", collapsed: true, items: [
-                        {text: 'a', link: "aa"},
-                        {text: 'b', link: "bb"},
-                        {text: 'c', link: "cc"},
+                    text: 'first_chapter',
+                    collapsed: true,
+                    items: [
+                        {text: 'one', link: '/guide/first_chapter/one'},
+                        {text: 'two', link: '/guide/first_chapter/two'},
+                    ]
+                },
+                {
+                    text: 'secondary_chapter',
+                    collapsed: true,
+                    items: [
+                        {text: 'three', link: '/guide/secondary_chapter/three'},
+                        {text: 'four', link: '/guide/secondary_chapter/four'},
                     ]
                 }
-            ]
+            ],
         },
+        aside: 'left',
 
         socialLinks: [
             {icon: 'wechat', link: '/social/social_wechat'},
@@ -234,8 +252,8 @@ export default defineConfig({
             {icon: 'gitee', link: 'https://gitee.com/wjq303812'},
             {icon: 'csdn', link: 'https://blog.csdn.net/Wen_J_Q'}
         ],
-
         returnToTopLabel: "返回顶部",
+        outline: 'deep',
         docFooter: {
             prev: "上一页",
             next: "下一页"
@@ -248,11 +266,5 @@ export default defineConfig({
         //     code: 'your-carbon-code',
         //     placement: 'your-carbon-placement'
         // }
-    },
-
-    Layout: () => {
-        return h(Layout, null, {
-            // https://vitepress.dev/guide/extending-default-theme#layout-slots
-        });
     }
 })

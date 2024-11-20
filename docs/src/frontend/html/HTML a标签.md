@@ -12,7 +12,7 @@
 
 ### 效果
 
-![image-20210730144034379](https://xyb.wyxjava.com/image-20210730144034379.png)
+![image-20210730144034379](https://attach.blog.wen7.online/image-20210730144034379.png)
 
 ### 知识点
 
@@ -86,7 +86,7 @@
 
 ### 效果
 
-![image-20210730151037530](http://xyb.wyxjava.com/image-20210730151037530.png)
+![image-20210730151037530](https://attach.blog.wen7.online/image-20210730151037530.png)
 
 ### 知识点
 

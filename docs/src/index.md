@@ -4,7 +4,7 @@ layout: home
 title: "Blog"
 
 hero:
-  name: "Hello Wen's Blog"
+  name: "Wen's Blog"
   text: "闻家奇的博客"
   tagline: Talk is Cheap,Show me the Code.
   image: 
@@ -36,3 +36,4 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<VisitorPanel />

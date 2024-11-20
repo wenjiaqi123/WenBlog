@@ -1,29 +1,39 @@
-:root {
-    --vp-c-brand-1: #5e3af2;
-    --vp-c-brand-2: #694aea;
-    --vp-c-brand-3: #7759f1;
+/* 自定义侧边栏在最左边，右边撑满宽度 */
+.VPDoc .container {
+    margin: 0 !important;
+}
+@media (min-width: 960px) {
+    .VPDoc:not(.has-sidebar) .content {
+        max-width: 1552px !important;
+    }
+}
+.VPDoc.has-aside .content-container {
+    max-width: 100% !important;
+}
+@media (min-width: 960px) {
+    .VPDoc:not(.has-sidebar) .container {
+        display: flex;
+        justify-content: center;
+        max-width: 1562px !important;
+    }
+}
+.aside-container {
+    position: fixed;
+    top: 0;
+    padding-top: calc(
+            var(--vp-nav-height) + var(--vp-layout-top-height, 0px) +
+            var(--vp-doc-top-height, 0px) + 10px
+    ) !important;
+    width: 400px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
-.dark {
-    --vp-c-brand-1: #9b85f5;
-    --vp-c-brand-2: #7759f1;
-    --vp-c-brand-3: #615ced;
-}
-
-:root {
-    /* hero标题渐变色 */
-    --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: -webkit-linear-gradient(
-            120deg,
-            #5e3af2,
-            #00f6c0
-    );
-
-    /*hero logo背景渐变色 */
-    --vp-home-hero-image-background-image: linear-gradient(
-            -45deg,
-            #5f3af2c8 50%,
-            #47cbff7e 50%
-    );
-    --vp-home-hero-image-filter: blur(76px);
+/* 自定义h2的间距 */
+.vp-doc h2 {
+    margin: 0px 0 16px;
+    padding-top: 24px;
+    border: none;
 }
