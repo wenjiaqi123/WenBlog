@@ -4,9 +4,9 @@ layout: home
 title: "Blog"
 
 hero:
-  name: "WenQ"
-  text: "Talk is Cheap,Show me the Code."
-  tagline: 好记性不如烂笔头
+  name: "Hello Wen"
+  text: "记录总结"
+  tagline: Talk is Cheap,Show me the Code.
   image: 
     src: /home_img.png
     alt: 闻
