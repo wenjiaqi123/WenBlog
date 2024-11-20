@@ -32,7 +32,7 @@ public static void test(int gender){
 测试表和数据
 ---
 
-```mysql
+```sql
 DROP TABLE IF EXISTS t_user;
 
 create table t_user
@@ -43,7 +43,7 @@ create table t_user
 );
 ```
 
-```mysql
+```sql
 INSERT INTO t_user (id, user_name, gender) VALUES (1, '牛大', 0);
 INSERT INTO t_user (id, user_name, gender) VALUES (2, '王二', 1);
 INSERT INTO t_user (id, user_name, gender) VALUES (3, '张三', 0);
@@ -60,7 +60,7 @@ case when then else end
 
 ### 基本语法
 
-```mysql
+```sql
 -- 推荐该种写法,很多情况都是等值
 case xxx
     when 值1 then 显示的值1
@@ -71,7 +71,7 @@ end
 
 - else 可以省略
 
-```mysql
+```sql
 case 
     when xxx=值1 then 显示的值1
     when xxx=值2 then 显示的值2
@@ -83,7 +83,7 @@ end
 
 - 当判断条件不是一个固定的值，比如 age 在[14-18] 之间显示 少年
 
-    - ```mysql
+    - ```sql
         case 
             when age between 14 and 18 then '少年'
             when age=15 then '及笄'
@@ -96,7 +96,7 @@ end
 
 ### 使用示例
 
-```mysql
+```sql
 select t.id        as id,
        t.user_name as userName,
        (case t.gender
@@ -107,7 +107,7 @@ select t.id        as id,
 from t_user t
 ```
 
-```mysql
+```sql
 select t.id        as id,
        t.user_name as userName,
        (case

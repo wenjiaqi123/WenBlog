@@ -37,7 +37,7 @@
 
 	- 字段不得含有保留字，如果坚持使用需要用着重号 ` 引起来
 
-	- ```mysql
+	- ```sql
 		-- 假设表名叫 order,字段名叫 select,from,order, 这下面的怎么解析
 		select select,from,order
 		from order
@@ -49,7 +49,7 @@
 
 ### 创建数据库
 
-```mysql
+```sql
 -- 创建数据库
 create database 数据库名;
 
@@ -70,7 +70,7 @@ create database if not exists 数据库名;
 
 ### 查看数据库
 
-```mysql
+```sql
 -- 查看所有的数据库
 show databases;
 
@@ -99,7 +99,7 @@ use 数据库名;
 
 - ==数据库不能改名==
 
-```mysql
+```sql
 -- 修改数据库字符集
 alter database 数据库名 character set 字符集;
 ```
@@ -108,7 +108,7 @@ alter database 数据库名 character set 字符集;
 
 ### 删除数据库
 
-```mysql
+```sql
 -- 删除指定数据库
 drop database 数据库名;
 

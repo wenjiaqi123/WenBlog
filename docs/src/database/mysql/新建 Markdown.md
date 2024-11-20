@@ -1,11 +1,11 @@
 
 
-```mysql
+```sql
 desc 表名;
 describe 表名;
 ```
 
-```mysql
+```sql
 desc emp;
 describe emp;
 ```

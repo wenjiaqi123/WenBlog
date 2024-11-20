@@ -32,7 +32,26 @@ export default defineConfig({
         logo: '/logo.jpg',      //配置 logo,logo 放在 public 文件夹下
         siteTitle: '闻家奇',     //配置 logo 后面的站点标题
         search: {               //开启搜索
-            provider: 'local'
+            provider: 'local',
+            options: {
+                translations: {
+                    button: {
+                        buttonText: "搜一搜",          //搜索框的 placeholder
+                        buttonAriaLabel: "搜索文档",
+
+                    },
+                    modal: {                            //搜索结果的弹窗
+                        resetButtonTitle: "清除搜索条件",
+                        displayDetails: "显示详情",
+                        noResultsText: "未找到相关结果,尝试更换关键词",
+                        footer: {
+                            selectText: "确定",
+                            navigateText: "切换",
+                            closeText: "关闭",
+                        },
+                    },
+                },
+            }
         },
         darkModeSwitchLabel: "深浅模式",
         nav: [

@@ -52,7 +52,7 @@ mysqladmin --version
 mysqld --initialize --user=mysql
 ```
 
-```mysql
+```sql
 # 查看密码,具体 mysqld.log 日志在哪里,可能有一点不一样。 要是找不到，可以全系统查找该日志 find / -name mysqld.log（在 / 目录下,按照名称查找,查找 mysqld.log 的文件）
 cat /var/log/mysql/mysqld.log
 ```
@@ -67,7 +67,7 @@ cat /var/log/mysql/mysqld.log
 首次登录
 ---
 
-```mysql
+```sql
 # 连接 mysql
 mysql -hlocalhost -P3306 -uroot -p
 
@@ -76,12 +76,12 @@ mysql>
 
 ### 重置密码
 
-```mysql
+```sql
 # 重置密码
 alter user '用户名'@'访问地址'  identified by '新密码';
 ```
 
-- ```mysql
+- ```sql
     # 设置 localhost 的 root 用户,密码为 root.123456
     alter user 'root'@'localhost' identified by 'root123';
     ```
@@ -90,18 +90,18 @@ alter user '用户名'@'访问地址'  identified by '新密码';
 
 修改配置允许远程登录
 
-- ```mysql
+- ```sql
     use mysql;			#切换数据库
     ```
 
-- ```mysql
+- ```sql
     select Host,User	#查看 user 表中 Host 和 User 的权限,localhost 表示只能本机登录
     from user;
     ```
 
     - ![image-20220919172751632](https://attach.blog.wen7.online/202209191727688.png)
 
-- ```mysql
+- ```sql
     update user			# 修改 root 用户的权限为 %,表示所有来源的访问都可以
     set host = '%'
     where user = 'root';
@@ -109,7 +109,7 @@ alter user '用户名'@'访问地址'  identified by '新密码';
 
     - 百分号 % 是通配符，比如 47.92.52.% 表示 47.92.52 为前缀的 IP 都可以访问，% 表示所有 IP 都可以访问。**生产环境应当根据自己公司的网络进行配置**
 
-- ```mysql
+- ```sql
     flush privileges;	# 刷新权限
     ```
 

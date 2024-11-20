@@ -2755,7 +2755,7 @@ MySQL的空间数据类型（Spatial Data Type）对应于OpenGIS类，包括单
 
 - 查看某个表已有的约束
 
-```mysql
+```sql
 #information_schema数据库名（系统库） 
 #table_constraints表名称（专门存储各个表的约束）
 SELECT * FROM information_schema.table_constraints 
@@ -2783,7 +2783,7 @@ NOT NULL
 
 （1）建表时
 
-```mysql
+```sql
 CREATE TABLE 表名称( 
     字段名 数据类型, 
     字段名 数据类型 NOT NULL, 
@@ -2793,14 +2793,14 @@ CREATE TABLE 表名称(
 
 （2）建表后
 
-```mysql
+```sql
 ALTER TABLE 表名称 
 MODIFY 字段名 数据类型 NOT NULL;
 ```
 
 ##### **2.5** **删除非空约束**
 
-```mysql
+```sql
 # 方式一：
 ALTER TABLE 表名称 
 MODIFY 字段名 数据类型 NULL; 
@@ -2831,7 +2831,7 @@ UNIQUE
 
 （1）建表时
 
-```mysql
+```sql
 CREATE TABLE 表名称( 
     字段名 数据类型, 
     字段名 数据类型 UNIQUE [KEY], 
@@ -2847,7 +2847,7 @@ CREATE TABLE 表名称(
 
 （2）建表后指定唯一键约束
 
-```mysql
+```sql
 #字段列表中如果是一个字段，表示该列的值唯一。如果是两个或更多个字段，那么复合唯一，即多个字段的组合是唯一的
 #方式1： 
 ALTER TABLE 表名称 
@@ -2866,7 +2866,7 @@ MODIFY 字段名 字段类型 UNIQUE [KEY];
 - 删除时需要指定唯一索引名，唯一索引名就和唯一约束名一样。
 - 如果创建唯一约束时未指定名称，如果是单列，就默认和列名相同；如果是组合列，那么默认和(字段列表)中排在第一个的列名相同。也可以自定义唯一性约束名。
 
-```mysql
+```sql
 ALTER TABLE 表名称
 DROP INDEX 索引名;
 ```
@@ -2898,7 +2898,7 @@ primary key
 
 （1）建表时指定主键约束
 
-```mysql
+```sql
 create table 表名称( 
     字段名 数据类型 primary key, #列级模式 
     字段名 数据类型, 
@@ -2912,7 +2912,7 @@ create table 表名称(
 );
 ```
 
-```mysql
+```sql
 # 列级约束
 CREATE TABLE emp4( 
     id INT PRIMARY KEY AUTO_INCREMENT, # AUTO_INCREMENT 表示自增
@@ -2928,14 +2928,14 @@ CREATE TABLE emp5(
 
 （2）建表后增加主键约束
 
-```mysql
+```sql
 ALTER TABLE 表名称 
 ADD PRIMARY KEY(字段列表); #字段列表可以是一个字段，也可以是多个字段，如果是多个字段的话，是复合主键
 ```
 
 ##### **4.5** **删除主键约束**
 
-```mysql
+```sql
 alter table 表名称 
 drop primary key;
 ```
@@ -2970,7 +2970,7 @@ auto_increment
 
 **（1）建表时**
 
-```mysql
+```sql
 create table 表名称( 
     字段名 数据类型 primary key auto_increment, 
     字段名 数据类型 unique key not null, 
@@ -2987,13 +2987,13 @@ create table 表名称(
 
 **（2）建表后**
 
-```mysql
+```sql
 alter table 表名称 modify 字段名 数据类型 auto_increment;
 ```
 
 ##### **5.5** **如何删除自增约束**
 
-```mysql
+```sql
 #alter table 表名称 modify 字段名 数据类型 auto_increment;#给这个字段增加自增约束 
 alter table 表名称 modify 字段名 数据类型; #去掉auto_increment相当于删除
 ```
@@ -3048,7 +3048,7 @@ FOREIGN KEY
 
 （1）建表时
 
-```mysql
+```sql
 create table 主表名称( 
     字段1 数据类型 primary key, 
     字段2 数据类型 
@@ -3066,7 +3066,7 @@ create table 从表名称(
 
 （2）建表后
 
-```mysql
+```sql
 ALTER TABLE 从表名 
 ADD [CONSTRAINT 约束名] FOREIGN KEY (从表的字段) REFERENCES 主表名(被引用 字段) [on update xx][on delete xx];
 ```
@@ -3090,7 +3090,7 @@ ADD [CONSTRAINT 约束名] FOREIGN KEY (从表的字段) REFERENCES 主表名(�
 
 对于外键约束，最好是采用:`ON UPDATE CASCADE ON DELETE RESTRICT`的方式。
 
-```mysql
+```sql
 create table emp( 
     eid int primary key, #员工编号 
     ename varchar(5), #员工姓名 
@@ -3101,7 +3101,7 @@ create table emp(
 
 ##### **6.7** **删除外键约束**
 
-```mysql
+```sql
 # (1)第一步先查看约束名和删除外键约束 
 SELECT * FROM information_schema.table_constraints WHERE table_name = '表名称';#查看某个表的约束名 
 ALTER TABLE 从表名 DROP FOREIGN KEY 外键约束名; 
@@ -3150,7 +3150,7 @@ MySQL5.7 可以使用check约束，但check约束对数据验证没有任何作�
 
 但是**MySQL 8.0中可以使用check约束了**。
 
-```mysql
+```sql
 CREATE TABLE temp( 
     id INT AUTO_INCREMENT, 
     NAME VARCHAR(20), 
@@ -3174,7 +3174,7 @@ DEFAULT
 
 （1）建表时
 
-```mysql
+```sql
 create table 表名称(
     字段名 数据类型 default 默认值 , 
     字段名 数据类型 not null default 默认值, 
@@ -3187,7 +3187,7 @@ create table 表名称(
 
 （2）建表后
 
-```mysql
+```sql
 alter table 表名称 
 modify 字段名 数据类型 default 默认值; 
 #如果这个字段原来有非空约束，你还保留非空约束，那么在加默认值约束时，还得保留非空约束，否则非空约束就被删除了 
@@ -3197,7 +3197,7 @@ alter table 表名称 modify 字段名 数据类型 default 默认值 not null;
 
 ##### **8.4** **如何删除默认值约束**
 
-```mysql
+```sql
 alter table 表名称 modify 字段名 数据类型 ;#删除默认值约束，也不保留非空约束 
 alter table 表名称 modify 字段名 数据类型 not null; #删除默认值约束，保留非空约束
 ```
@@ -3258,7 +3258,7 @@ MySQL支持多种存储引擎，每一个表都可以指定一个不同的存储
 
 - **在** **CREATE VIEW** **语句中嵌入子查询**
 
-```mysql
+```sql
 CREATE [OR REPLACE] 
 [ALGORITHM = {UNDEFINED | MERGE | TEMPTABLE}] 
 VIEW 视图名称 [(字段列表)] 
@@ -3268,7 +3268,7 @@ AS 查询语句
 
 - 精简版
 
-```mysql
+```sql
 CREATE VIEW 视图名称 
 AS 查询语句
 ```
@@ -3277,19 +3277,19 @@ AS 查询语句
 
 语法1：查看数据库的表对象、视图对象
 
-```mysql
+```sql
 SHOW TABLES;
 ```
 
 语法2：查看视图的结构
 
-```mysql
+```sql
 DESC / DESCRIBE 视图名称;
 ```
 
 语法3：查看视图的属性信息
 
-```mysql
+```sql
 # 查看视图信息（显示数据表的存储引擎、版本、数据行数和数据大小等） 
 SHOW TABLE STATUS LIKE '视图名称'\G
 ```
@@ -3298,7 +3298,7 @@ SHOW TABLE STATUS LIKE '视图名称'\G
 
 语法4：查看视图的详细定义信息
 
-```mysql
+```sql
 SHOW CREATE VIEW 视图名称;
 ```
 
@@ -3331,7 +3331,7 @@ MySQL支持使用INSERT、UPDATE和DELETE语句对视图中的数据进行插入
 
 方式2：ALTER VIEW
 
-```mysql
+```sql
 ALTER VIEW 视图名称 
 AS
 查询语句
@@ -3341,7 +3341,7 @@ AS
 
 - 删除视图只是删除视图的定义，并不会删除基表的数据。
 
-```mysql
+```sql
 DROP VIEW IF EXISTS 视图名称;
 ```
 
@@ -3391,7 +3391,7 @@ MySQL将用户对数据的`访问限制`在某些数据的结果集上，而这�
 
 语法：
 
-```mysql
+```sql
 CREATE PROCEDURE 存储过程名(IN|OUT|INOUT 参数名 参数类型,...) 
 [characteristics ...] 
 BEGIN
@@ -3413,7 +3413,7 @@ END
 
 3、`characteristics`表示创建存储过程时指定的对存储过程的约束条件，其取值信息如下：
 
-```mysql
+```sql
 LANGUAGE SQL 
 | [NOT] DETERMINISTIC 
 | { CONTAINS SQL | NO SQL | READS SQL DATA | MODIFIES SQL DATA } 
@@ -3439,7 +3439,7 @@ LANGUAGE SQL
 
 5、需要设置新的结束标记
 
-```mysql
+```sql
 DELIMITER 新的结束标记
 ```
 
@@ -3458,7 +3458,7 @@ DELIMITER ;
 
 举例2：创建存储过程avg_employee_salary()，返回所有员工的平均工资
 
-```mysql
+```sql
 DELIMITER // 
 CREATE PROCEDURE avg_employee_salary () 
 BEGIN
@@ -3469,7 +3469,7 @@ DELIMITER ;
 
 举例3：创建存储过程show_max_salary()，用来查看“emps”表的最高薪资值。
 
-```mysql
+```sql
 DELIMITER // 
 CREATE PROCEDURE show_max_salary() 
     LANGUAGE SQL
@@ -3485,7 +3485,7 @@ DELIMITER ;
 
 举例4：创建存储过程show_someone_salary2()，查看“emps”表的某个员工的薪资，并用IN参数empname输入员工姓名，用OUT参数empsalary输出员工薪资。
 
-```mysql
+```sql
 DELIMITER // 
 CREATE PROCEDURE show_someone_salary2(IN empname VARCHAR(20),OUT empsalary DOUBLE) 
 BEGIN
@@ -3496,7 +3496,7 @@ DELIMITER ;
 
 举例5：创建存储过程show_mgr_name()，查询某个员工领导的姓名，并用INOUT参数“empname”输入员工姓名，输出领导的姓名。
 
-```mysql
+```sql
 DELIMITER // 
 CREATE PROCEDURE show_mgr_name(INOUT empname VARCHAR(20)) 
 BEGIN
@@ -3509,7 +3509,7 @@ DELIMITER ;
 
 ##### **3.1** **调用格式**
 
-```mysql
+```sql
 CALL 存储过程名(实参列表)
 ```
 
@@ -3517,13 +3517,13 @@ CALL 存储过程名(实参列表)
 
 1、调用in模式的参数：
 
-```mysql
+```sql
 CALL sp1('值');
 ```
 
 2、调用out模式的参数：
 
-```mysql
+```sql
 SET @name; 
 CALL sp1(@name); 
 SELECT @name;
@@ -3531,7 +3531,7 @@ SELECT @name;
 
 3、调用inout模式的参数：
 
-```mysql
+```sql
 SET @name=值; 
 CALL sp1(@name); 
 SELECT @name;
@@ -3543,7 +3543,7 @@ SELECT @name;
 
 语法格式：
 
-```mysql
+```sql
 CREATE FUNCTION 函数名(参数名 参数类型,...) 
 RETURNS 返回值类型 
 [characteristics ...] 
@@ -3566,7 +3566,7 @@ RETURNS子句只能对FUNCTION做指定，对函数而言这是`强制`的。它
 
 ##### **4.2** **调用存储函数**
 
-```mysql
+```sql
 SELECT 函数名(实参列表)
 ```
 
@@ -3574,7 +3574,7 @@ SELECT 函数名(实参列表)
 
 创建存储函数count_by_id()，参数传入dept_id，该函数查询dept_id部门的员工人数，并返回，数据类型为整型。
 
-```mysql
+```sql
 DELIMITER // 
 CREATE FUNCTION count_by_id(dept_id INT) 
 RETURNS INT 
@@ -3591,7 +3591,7 @@ DELIMITER ;
 
 调用：
 
-```mysql
+```sql
 SET @dept_id = 50; 
 SELECT count_by_id(@dept_id);
 ```
@@ -3603,7 +3603,7 @@ SELECT count_by_id(@dept_id);
 - 方式1：加上必要的函数特性“[NOT] DETERMINISTIC”和“{CONTAINS SQL | NO SQL | READS SQL DATA | MODIFIES SQL DATA}”
 - 方式2：
 
-```mysql
+```sql
 mysql> SET GLOBAL log_bin_trust_function_creators = 1;
 ```
 
@@ -3622,19 +3622,19 @@ mysql> SET GLOBAL log_bin_trust_function_creators = 1;
 
 **1.** **使用SHOW CREATE语句查看存储过程和函数的创建信息**
 
-```mysql
+```sql
 SHOW CREATE {PROCEDURE | FUNCTION} 存储过程名或函数名
 ```
 
 **2.** **使用SHOW STATUS语句查看存储过程和函数的状态信息**
 
-```mysql
+```sql
 SHOW {PROCEDURE | FUNCTION} STATUS [LIKE 'pattern']
 ```
 
 **3.** **从information_schema.Routines表中查看存储过程和函数的信息**
 
-```mysql
+```sql
 SELECT * FROM information_schema.Routines 
 WHERE ROUTINE_NAME='存储过程或函数的名' [AND ROUTINE_TYPE = {'PROCEDURE|FUNCTION'}];
 ```
@@ -3643,13 +3643,13 @@ WHERE ROUTINE_NAME='存储过程或函数的名' [AND ROUTINE_TYPE = {'PROCEDURE
 
 修改存储过程或函数，不影响存储过程或函数功能，只是修改相关特性。使用ALTER语句实现。
 
-```mysql
+```sql
 ALTER {PROCEDURE | FUNCTION} 存储过程或函数的名 [characteristic ...];
 ```
 
 其中，characteristic指定存储过程或函数的特性，其取值信息与创建存储过程、函数时的取值信息略有不同。
 
-```mysql
+```sql
 { CONTAINS SQL | NO SQL | READS SQL DATA | MODIFIES SQL DATA } 
 | SQL SECURITY { DEFINER | INVOKER } 
 | COMMENT 'string'
@@ -3657,7 +3657,7 @@ ALTER {PROCEDURE | FUNCTION} 存储过程或函数的名 [characteristic ...];
 
 ##### **5.3** **删除**
 
-```mysql
+```sql
 DROP {PROCEDURE | FUNCTION} [IF EXISTS] 存储过程或函数的名;
 ```
 
@@ -3712,7 +3712,7 @@ DROP {PROCEDURE | FUNCTION} [IF EXISTS] 存储过程或函数的名;
 
 - **查看所有或部分系统变量**
 
-```mysql
+```sql
 #查看所有全局变量 
 SHOW GLOBAL VARIABLES; 
 #查看所有会话变量 
@@ -3721,7 +3721,7 @@ SHOW SESSION VARIABLES;
 SHOW VARIABLES;
 ```
 
-```mysql
+```sql
 #查看满足条件的部分系统变量。 
 SHOW GLOBAL VARIABLES LIKE '%标识符%';
 #查看满足条件的部分会话变量 
@@ -3732,7 +3732,7 @@ SHOW SESSION VARIABLES LIKE '%标识符%';
 
 作为 MySQL 编码规范，MySQL 中的系统变量以`两个“@”`开头，其中“@@global”仅用于标记全局系统变量，“@@session”仅用于标记会话系统变量。“@@”首先标记会话系统变量，如果会话系统变量不存在，则标记全局系统变量。
 
-```mysql
+```sql
 #查看指定的系统变量的值 
 SELECT @@global.变量名; 
 #查看指定的会话变量的值 
@@ -3747,7 +3747,7 @@ SELECT @@变量名;
 
 方式2：在MySQL服务运行期间，使用“set”命令重新设置系统变量的值
 
-```mysql
+```sql
 #为某个系统变量赋值 
 #方式1： 
 SET @@global.变量名=变量值; 
@@ -3773,7 +3773,7 @@ SET SESSION 变量名=变量值;
 
 - 变量的定义
 
-```mysql
+```sql
 #方式1：“=”或“:=” 
 SET @用户变量 = 值; 
 SET @用户变量 := 值; 
@@ -3784,7 +3784,7 @@ SELECT 表达式 INTO @用户变量 [FROM 等子句];
 
 - 查看用户变量的值 （查看、比较、运算等）
 
-```mysql
+```sql
 SELECT @用户变量
 ```
 
@@ -3796,7 +3796,7 @@ SELECT @用户变量
 
 位置：只能放在 BEGIN ... END 中，而且只能放在第一句
 
-```mysql
+```sql
 BEGIN
 	#声明局部变量 
 	DECLARE 变量名1 变量数据类型 [DEFAULT 变量默认值]; 
@@ -3811,7 +3811,7 @@ END
 
 **1.定义变量**
 
-```mysql
+```sql
 DECLARE 变量名 类型 [default 值]; # 如果没有DEFAULT子句，初始值为NULL
 ```
 
@@ -3819,20 +3819,20 @@ DECLARE 变量名 类型 [default 值]; # 如果没有DEFAULT子句，初始值�
 
 方式1：一般用于赋简单的值
 
-```mysql
+```sql
 SET 变量名=值; 
 SET 变量名:=值;
 ```
 
 方式2：一般用于赋表中的字段值
 
-```mysql
+```sql
 SELECT 字段名或表达式 INTO 变量名 FROM 表;
 ```
 
 **3.使用变量**（查看、比较、运算等）
 
-```mysql
+```sql
 SELECT 局部变量名;
 ```
 
@@ -3853,7 +3853,7 @@ SELECT 局部变量名;
 
 ##### **2.1** **定义条件**
 
-```mysql
+```sql
 DECLARE 错误名称 CONDITION FOR 错误码（或错误条件）
 ```
 
@@ -3865,7 +3865,7 @@ DECLARE 错误名称 CONDITION FOR 错误码（或错误条件）
 
 - 例如，在ERROR 1418 (HY000)中，1418是MySQL_error_code，'HY000'是sqlstate_value。
 
-```mysql
+```sql
 #使用MySQL_error_code 
 DECLARE Field_Not_Be_NULL CONDITION FOR 1048; 
 #使用sqlstate_value 
@@ -3874,7 +3874,7 @@ DECLARE Field_Not_Be_NULL CONDITION FOR SQLSTATE '23000';
 
 ##### **2.2** **定义处理程序**
 
-```mysql
+```sql
 DECLARE 处理方式 HANDLER FOR 错误类型 处理语句
 ```
 
@@ -3895,7 +3895,7 @@ DECLARE 处理方式 HANDLER FOR 错误类型 处理语句
 
 定义处理程序的几种方式，代码如下：
 
-```mysql
+```sql
 #方法1：捕获sqlstate_value 
 DECLARE CONTINUE HANDLER FOR SQLSTATE '42S02' SET @info = 'NO_SUCH_TABLE'; 
 #方法2：捕获mysql_error_value 
@@ -3915,7 +3915,7 @@ DECLARE EXIT HANDLER FOR SQLEXCEPTION SET @info = 'ERROR';
 
 ##### **3.1** **分支结构之** **IF**
 
-```mysql
+```sql
 IF 表达式1 THEN 操作1 
 [ELSEIF 表达式2 THEN 操作2]…… 
 [ELSE 操作N] 
@@ -3926,7 +3926,7 @@ END IF
 
 CASE 语句的语法结构1：
 
-```mysql
+```sql
 #情况一：类似于switch 
 CASE 表达式 
 WHEN 值1 THEN 结果1或语句1(如果是语句，需要加分号) 
@@ -3938,7 +3938,7 @@ END [case]（如果是放在begin end中需要加上case，如果放在select后
 
 CASE 语句的语法结构2：
 
-```mysql
+```sql
 #情况二：类似于多重if 
 CASE 
 WHEN 条件1 THEN 结果1或语句1(如果是语句，需要加分号) 
@@ -3952,7 +3952,7 @@ END [case]（如果是放在begin end中需要加上case，如果放在select后
 
 LOOP循环语句用来重复执行某些语句。LOOP内的语句一直重复执行直到循环被退出（使用LEAVE子句），跳出循环过程。
 
-```mysql
+```sql
 [loop_label:] LOOP 
 	循环执行的语句 
 END LOOP [loop_label]
@@ -3960,7 +3960,7 @@ END LOOP [loop_label]
 
 ##### **3.4** **循环结构之WHILE**
 
-```mysql
+```sql
 [while_label:] WHILE 循环条件 DO 
 	循环体 
 END WHILE [while_label];
@@ -3968,7 +3968,7 @@ END WHILE [while_label];
 
 ##### **3.5** **循环结构之REPEAT**
 
-```mysql
+```sql
 [repeat_label:] REPEAT 
 	循环体的语句 
 	UNTIL 结束循环的条件表达式 
@@ -3983,7 +3983,7 @@ END REPEAT [repeat_label]
 
 LEAVE语句：可以用在循环语句内，或者以 BEGIN 和 END 包裹起来的程序体内，表示跳出循环或者跳出程序体的操作。如果你有面向过程的编程语言的使用经验，你可以把 LEAVE 理解为 break。
 
-```mysql
+```sql
 LEAVE 标记名
 ```
 
@@ -3991,7 +3991,7 @@ LEAVE 标记名
 
 ITERATE语句：只能用在循环语句（LOOP、REPEAT和WHILE语句）内，表示重新开始循环，将执行顺序转到语句段开头处。如果你有面向过程的编程语言的使用经验，你可以把 ITERATE 理解为 continue，意思为“再次循环”。
 
-```mysql
+```sql
 ITERATE label
 ```
 
@@ -4007,19 +4007,19 @@ ITERATE label
 
 **第一步，声明游标**
 
-```mysql
+```sql
 DECLARE cursor_name CURSOR FOR select_statement;
 ```
 
 **第二步，打开游标**
 
-```mysql
+```sql
 OPEN cursor_name
 ```
 
 **第三步，使用游标（从游标中取得数据）**
 
-```mysql
+```sql
 FETCH cursor_name INTO var_name [, var_name] ...
 ```
 
@@ -4027,7 +4027,7 @@ FETCH cursor_name INTO var_name [, var_name] ...
 
 **第四步，关闭游标**
 
-```mysql
+```sql
 CLOSE cursor_name
 ```
 
@@ -4045,7 +4045,7 @@ CLOSE cursor_name
 
 使用SET GLOBAL语句设置的变量值只会`临时生效`。`数据库重启`后，服务器又会从MySQL配置文件中读取变量的默认值。 MySQL 8.0版本新增了`SET PERSIST`命令。
 
-```mysql
+```sql
 SET PERSIST global max_connections = 1000;
 ```
 
@@ -4065,7 +4065,7 @@ MySQL从`5.0.2`版本开始支持触发器。MySQL的触发器和存储过程一
 
 ##### **2.1** **创建触发器语法**
 
-```mysql
+```sql
 CREATE TRIGGER 触发器名称 
 {BEFORE|AFTER} {INSERT|UPDATE|DELETE} ON 表名 
 FOR EACH ROW 
@@ -4081,7 +4081,7 @@ FOR EACH ROW
   - UPDATE 表示更新记录时触发；
   - DELETE 表示删除记录时触发。
 
-```mysql
+```sql
 DELIMITER // 
 CREATE TRIGGER before_insert 
 BEFORE INSERT ON test_trigger 
@@ -4099,25 +4099,25 @@ DELIMITER ;
 
 方式1：查看当前数据库的所有触发器的定义
 
-```mysql
+```sql
 SHOW TRIGGERS\G
 ```
 
 方式2：查看当前数据库中某个触发器的定义
 
-```mysql
+```sql
 SHOW CREATE TRIGGER 触发器名
 ```
 
 方式3：从系统库information_schema的TRIGGERS表中查询“salary_check_trigger”触发器的信息。
 
-```mysql
+```sql
 SELECT * FROM information_schema.TRIGGERS;
 ```
 
 ##### **3.2** **删除触发器**
 
-```mysql
+```sql
 DROP TRIGGER IF EXISTS 触发器名称;
 ```
 
@@ -4177,13 +4177,13 @@ MySQL从8.0版本开始支持窗口函数。窗口函数的作用类似于在查
 
 窗口函数的语法结构是：
 
-```mysql
+```sql
 函数 OVER（[PARTITION BY 字段名 ORDER BY 字段名 ASC|DESC]）
 ```
 
 或者是：
 
-```mysql
+```sql
 函数 OVER 窗口名 … WINDOW 窗口名 AS （[PARTITION BY 字段名 ORDER BY 字段名 ASC|DESC]）
 ```
 
@@ -4195,7 +4195,7 @@ MySQL从8.0版本开始支持窗口函数。窗口函数的作用类似于在查
 - ORDER BY子句：指定窗口函数按照哪些字段进行排序。执行排序操作使窗口函数按照排序后的数据记录的顺序进行编号。
 - FRAME子句：为分区中的某个子集定义规则，可以用来作为滑动窗口使用。
 
-```mysql
+```sql
 SELECT ROW_NUMBER() OVER(PARTITION BY category_id ORDER BY price DESC) AS row_num, id, category_id, category, NAME, price, stock
 FROM goods;
 ```
@@ -4212,7 +4212,7 @@ FROM goods;
 
 ##### **2.1** **普通公用表表达式**
 
-```mysql
+```sql
 WITH CTE名称 
 AS （子查询） 
 SELECT|DELETE|UPDATE 语句;
@@ -4220,7 +4220,7 @@ SELECT|DELETE|UPDATE 语句;
 
 举例：查询员工所在的部门的详细信息。
 
-```mysql
+```sql
 WITH emp_dept_id
 AS (SELECT DISTINCT department_id FROM employees)
 SELECT *
@@ -4230,7 +4230,7 @@ ON d.department_id = e.department_id;
 
 ##### **2.2** **递归公用表表达式**
 
-```mysql
+```sql
 WITH RECURSIVE 
 CTE名称 AS （子查询） 
 SELECT|DELETE|UPDATE 语句;
@@ -4246,7 +4246,7 @@ SELECT|DELETE|UPDATE 语句;
 
 **代码实现：**
 
-```mysql
+```sql
 WITH RECURSIVE cte 
 AS(SELECT employee_id,last_name,manager_id,1 AS n FROM employees WHERE employee_id = 100
 -- 种子查询，找到第一代领导 
@@ -4427,7 +4427,7 @@ systemctl disable mysqld.service
 
 ##### **3.2** **修改密码**
 
-```mysql
+```sql
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
 ```
 
@@ -4489,7 +4489,7 @@ firewall-cmd --reload
 
 - 修改允许远程登陆
 
-```mysql
+```sql
 use mysql;
 select Host,User from user;
 update user set host = '%' where user ='root';
@@ -4506,7 +4506,7 @@ flush privileges;
 
 **解决方法二：**
 
-```mysql
+```sql
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'abc123';
 ```
 
@@ -4514,7 +4514,7 @@ ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'abc123';
 
 ##### **5.1** **各级别的字符集**
 
-```mysql
+```sql
 show variables like 'character%';
 ```
 
@@ -4551,7 +4551,7 @@ find / -name mysql
 
 ##### **1.1** **数据库文件的存放路径** 
 
-```mysql
+```sql
 show variables like 'datadir'; # /var/lib/mysql/
 ```
 
@@ -4634,7 +4634,7 @@ test.MYI 存储索引 (MYIndex
 
 启动MySQL服务后，可以通过mysql命令来登录MySQL服务器，命令如下：
 
-```mysql
+```sql
 mysql –h hostname|hostIP –P port –u username –p DatabaseName –e "SQL语句"
 ```
 
@@ -4645,26 +4645,26 @@ mysql –h hostname|hostIP –P port –u username –p DatabaseName –e "SQL�
 - `DatabaseName参数`指明登录到哪一个数据库中。如果没有该参数，就会直接登录到MySQL数据库中，然后可以使用USE命令来选择数据库。
 - `-e参数`后面可以直接加SQL语句。登录MySQL服务器以后即可执行这个SQL语句，然后退出MySQL服务器。
 
-```mysql
+```sql
 mysql -uroot -p -hlocalhost -P3306 mysql -e "select host,user from user"
 ```
 
 ##### **1.2** **创建用户**
 
-```mysql
+```sql
 CREATE USER 用户名 [IDENTIFIED BY '密码'][,用户名 [IDENTIFIED BY '密码']];
 ```
 
 举例：
 
-```mysql
+```sql
 CREATE USER zhang3 IDENTIFIED BY '123123'; # 默认host是 %
 CREATE USER 'kangshifu'@'localhost' IDENTIFIED BY '123456';
 ```
 
 ##### **1.3** **修改用户**
 
-```mysql
+```sql
 UPDATE mysql.user SET USER='li4' WHERE USER='wang5'; 
 FLUSH PRIVILEGES;
 ```
@@ -4673,20 +4673,20 @@ FLUSH PRIVILEGES;
 
 **方式1：使用DROP方式删除（推荐）**
 
-```mysql
+```sql
 DROP USER user[,user]…;
 ```
 
 举例：
 
-```mysql
+```sql
 DROP USER li4 ; # 默认删除host为%的用户
 DROP USER 'kangshifu'@'localhost';
 ```
 
 **方式2：使用DELETE方式删除（不推荐，有残留信息）**
 
-```mysql
+```sql
 DELETE FROM mysql.user WHERE Host=’hostname’ AND User=’username’;
 FLUSH PRIVILEGES;
 ```
@@ -4695,13 +4695,13 @@ FLUSH PRIVILEGES;
 
 **1.** **使用ALTER USER命令来修改当前用户密码**
 
-```mysql
+```sql
 ALTER USER USER() IDENTIFIED BY 'new_password';
 ```
 
 **2.** **使用SET语句来修改当前用户密码**
 
-```mysql
+```sql
 SET PASSWORD='new_password';
 ```
 
@@ -4709,14 +4709,14 @@ SET PASSWORD='new_password';
 
 **1.** **使用ALTER语句来修改普通用户的密码**
 
-```mysql
+```sql
 ALTER USER user [IDENTIFIED BY '新密码'] 
 [,user[IDENTIFIED BY '新密码']]…;
 ```
 
 **2.** **使用SET命令来修改普通用户的密码**
 
-```mysql
+```sql
 SET PASSWORD FOR 'username'@'hostname'='new_password';
 ```
 
@@ -4724,7 +4724,7 @@ SET PASSWORD FOR 'username'@'hostname'='new_password';
 
 ##### **2.1** **权限列表**
 
-```mysql
+```sql
 show privileges;
 ```
 
@@ -4751,20 +4751,20 @@ show privileges;
 
 ##### **2.3** **授予权限**
 
-```mysql
+```sql
 GRANT 权限1,权限2,…权限n ON 数据库名称.表名称 TO 用户名@用户地址 [IDENTIFIED BY ‘密码口令’];
 ```
 
 - 该权限如果发现没有该用户，则会直接新建一个用户。
 - 给li4用户用本地命令行方式，授予atguigudb这个库下的所有表的插删改查的权限。
 
-```mysql
+```sql
 GRANT SELECT,INSERT,DELETE,UPDATE ON atguigudb.* TO li4@localhost;
 ```
 
 - 授予通过网络方式登录的joe用户 ，对所有库所有表的全部权限，密码设为123。注意这里唯独不包括grant的权限
 
-```mysql
+```sql
 GRANT ALL PRIVILEGES ON *.* TO joe@'%' IDENTIFIED BY '123';
 ```
 
@@ -4772,7 +4772,7 @@ GRANT ALL PRIVILEGES ON *.* TO joe@'%' IDENTIFIED BY '123';
 
 - 查看当前用户权限
 
-```mysql
+```sql
 SHOW GRANTS; 
 # 或 
 SHOW GRANTS FOR CURRENT_USER; 
@@ -4782,7 +4782,7 @@ SHOW GRANTS FOR CURRENT_USER();
 
 - 查看某用户的全局权限
 
-```mysql
+```sql
 SHOW GRANTS FOR 'user'@'主机地址';
 ```
 
@@ -4792,13 +4792,13 @@ SHOW GRANTS FOR 'user'@'主机地址';
 
 - 收回权限命令
 
-```mysql
+```sql
 REVOKE 权限1,权限2,…权限n ON 数据库名称.表名称 FROM 用户名@用户地址;
 ```
 
 - 举例
 
-```mysql
+```sql
 #收回全库全表的所有权限 
 REVOKE ALL PRIVILEGES ON *.* FROM joe@'%'; 
 #收回mysql库下的所有表的插删改查权限 
@@ -4811,7 +4811,7 @@ REVOKE SELECT,INSERT,UPDATE,DELETE ON mysql.* FROM joe@localhost;
 
 ##### **3.1** **创建角色**
 
-```mysql
+```sql
 CREATE ROLE 'role_name'[@'host_name'] [,'role_name'[@'host_name']]...
 ```
 
@@ -4819,19 +4819,19 @@ CREATE ROLE 'role_name'[@'host_name'] [,'role_name'[@'host_name']]...
 
 ##### **3.2** **给角色赋予权限**
 
-```mysql
+```sql
 GRANT privileges ON table_name TO 'role_name'[@'host_name'];
 ```
 
 上述语句中privileges代表权限的名称，多个权限以逗号隔开。可使用SHOW语句查询权限名称
 
-```mysql
+```sql
 SHOW PRIVILEGES\G
 ```
 
 ##### **3.3** **查看角色的权限**
 
-```mysql
+```sql
 SHOW GRANTS FOR 'role_name';
 ```
 
@@ -4839,13 +4839,13 @@ SHOW GRANTS FOR 'role_name';
 
 ##### **3.4** **回收角色的权限**
 
-```mysql
+```sql
 REVOKE privileges ON tablename FROM 'rolename';
 ```
 
 ##### **3.5** **删除角色**
 
-```mysql
+```sql
 DROP ROLE role [,role2]...
 ```
 
@@ -4855,13 +4855,13 @@ DROP ROLE role [,role2]...
 
 角色创建并授权后，要赋给用户并处于`激活状态`才能发挥作用。
 
-```mysql
+```sql
 GRANT role [,role2,...] TO user [,user2,...];
 ```
 
 查询当前已激活的角色
 
-```mysql
+```sql
 SELECT CURRENT_ROLE();
 ```
 
@@ -4869,13 +4869,13 @@ SELECT CURRENT_ROLE();
 
 **方式1：使用set default role 命令激活角色**
 
-```mysql
+```sql
 SET DEFAULT ROLE ALL TO 'kangshifu'@'localhost';
 ```
 
 **方式2：将activate_all_roles_on_login设置为ON**
 
-```mysql
+```sql
 SET GLOBAL activate_all_roles_on_login=ON;
 ```
 
@@ -4883,7 +4883,7 @@ SET GLOBAL activate_all_roles_on_login=ON;
 
 ##### **3.8** **撤销用户的角色**
 
-```mysql
+```sql
 REVOKE role FROM user;
 ```
 
@@ -4898,7 +4898,7 @@ mandatory_roles='role1,role2@localhost,r3@%.atguigu.com'
 
 方式2：运行时设置
 
-```mysql
+```sql
 SET PERSIST mandatory_roles = 'role1,role2@localhost,r3@%.example.com'; #系统重启后仍然有效
 SET GLOBAL mandatory_roles = 'role1,role2@localhost,r3@%.example.com'; #系统重启后失效
 ```
@@ -4938,7 +4938,7 @@ SET GLOBAL mandatory_roles = 'role1,role2@localhost,r3@%.example.com'; #系统�
   - 这个执行计划表明应该`使用哪些索引`进行查询（全表检索还是使用索引检索），表之间的连接顺序如何，最后会按照执行计划中的步骤调用存储引擎提供的方法来真正的执行查询，并将查询结果返回给用户。
   - 它使用“`选取-投影-连接`”策略进行查询。例如：
 
-  ```mysql
+  ```sql
   SELECT id,name FROM student WHERE gender = '女';
   ```
 
@@ -5032,13 +5032,13 @@ SQL 语句在 MySQL 中的流程是： SQL语句→查询缓存→解析器→�
 
 查看缓冲池的大小
 
-```mysql
+```sql
 show variables like 'innodb_buffer_pool_size';
 ```
 
 设置缓冲池的大小
 
-```mysql
+```sql
 set global innodb_buffer_pool_size = 268435456;
 ```
 
@@ -5058,7 +5058,7 @@ innodb_buffer_pool_instances = 2
 
 何查看缓冲池的个数
 
-```mysql
+```sql
 show variables like 'innodb_buffer_pool_instances';
 ```
 
@@ -5072,7 +5072,7 @@ innodb_buffer_pool_size/innodb_buffer_pool_instances
 
 #### **1.** **查看存储引擎**
 
-```mysql
+```sql
 show engines;
 # 或
 show engines\G
@@ -5082,7 +5082,7 @@ show engines\G
 
 - 查看默认的存储引擎：
 
-```mysql
+```sql
 show variables like '%storage_engine%'; 
 #或
 SELECT @@default_storage_engine;
@@ -5092,7 +5092,7 @@ SELECT @@default_storage_engine;
 
 如果在创建表的语句中没有显式指定表的存储引擎的话，那就会默认使用`InnoDB`作为表的存储引擎。
 
-```mysql
+```sql
 SET DEFAULT_STORAGE_ENGINE=MyISAM;
 ```
 
@@ -5113,7 +5113,7 @@ systemctl restart mysqld.service
 
 ##### **3.1** **创建表时指定存储引擎**
 
-```mysql
+```sql
 CREATE TABLE 表名(
     建表语句; 
 ) ENGINE = 存储引擎名称;
@@ -5121,7 +5121,7 @@ CREATE TABLE 表名(
 
 ##### **3.2** **修改表的存储引擎**
 
-```mysql
+```sql
 ALTER TABLE 表名 ENGINE = 存储引擎名称;
 ```
 
@@ -5212,7 +5212,7 @@ MySQL官方对索引的定义为：**索引（Index）是帮助MySQL高效获取
 
 ##### **2.1** **索引之前的查找**
 
-```mysql
+```sql
 SELECT [列名列表] FROM 表名 WHERE 列名 = xxx;
 ```
 
@@ -5236,7 +5236,7 @@ SELECT [列名列表] FROM 表名 WHERE 列名 = xxx;
 
 ##### **2.2** **设计索引**
 
-```mysql
+```sql
 mysql> CREATE TABLE index_demo(
     -> c1 INT,
     -> c2 INT,
@@ -5758,11 +5758,11 @@ InnoDB规定：对于最小记录所在的分组只能有1条记录，最大记�
 
 ##### 3.1 指定行格式的语法
 
-```mysql
+```sql
 CREATE TABLE 表名 (列的信息) ROW_FORMAT=行格式名称
 ```
 
-```mysql
+```sql
 ALTER TABLE 表名 ROW_FORMAT=行格式名称
 ```
 
@@ -5900,7 +5900,7 @@ MySQL会自动给每个页里加了两个记录，由于这两个记录并不是
 
 ##### **1.2** **创建索引**
 
-```mysql
+```sql
 CREATE TABLE table_name [col_name data_type] 
 [UNIQUE | FULLTEXT | SPATIAL] [INDEX | KEY] [index_name] (col_name [length]) [ASC | DESC]
 ```
@@ -5914,7 +5914,7 @@ CREATE TABLE table_name [col_name data_type]
 
 **1.** **创建普通索引**
 
-```mysql
+```sql
 CREATE TABLE book( 
     book_id INT , 
     book_name VARCHAR(100), 
@@ -5928,7 +5928,7 @@ CREATE TABLE book(
 
 **2.** **创建唯一索引**
 
-```mysql
+```sql
 CREATE TABLE test1( 
     id INT NOT NULL, 
     name varchar(30) NOT NULL, 
@@ -5938,7 +5938,7 @@ CREATE TABLE test1(
 
 **3.** **主键索引**
 
-```mysql
+```sql
 CREATE TABLE student ( 
     id INT(10) UNSIGNED AUTO_INCREMENT, 
     student_no VARCHAR(200),
@@ -5947,14 +5947,14 @@ CREATE TABLE student (
 );
 ```
 
-```mysql
+```sql
 # 删除主键索引
 ALTER TABLE student drop PRIMARY KEY ;
 ```
 
 **4.** **创建单列索引**
 
-```mysql
+```sql
 CREATE TABLE test2( 
     id INT NOT NULL, 
     name CHAR(50) NULL, 
@@ -5964,7 +5964,7 @@ CREATE TABLE test2(
 
 **5.** **创建组合索引**
 
-```mysql
+```sql
 CREATE TABLE test3( 
     id INT(11) NOT NULL, 
     name CHAR(30) NOT NULL, 
@@ -5976,7 +5976,7 @@ CREATE TABLE test3(
 
 **6.** **创建全文索引**
 
-```mysql
+```sql
 CREATE TABLE `papers` ( 
     id` int(10) unsigned NOT NULL AUTO_INCREMENT, 
     `title` varchar(200) DEFAULT NULL, 
@@ -5985,13 +5985,13 @@ CREATE TABLE `papers` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 ```
 
-```mysql
+```sql
 SELECT * FROM papers WHERE MATCH(title,content) AGAINST (‘查询字符串’);
 ```
 
 **7.** **创建空间索引**
 
-```mysql
+```sql
 CREATE TABLE test5( 
     geo GEOMETRY NOT NULL, 
     SPATIAL INDEX spa_idx_geo(geo) 
@@ -6002,14 +6002,14 @@ CREATE TABLE test5(
 
 **1.** **使用ALTER TABLE语句创建索引**
 
-```mysql
+```sql
 ALTER TABLE table_name 
 ADD [UNIQUE | FULLTEXT | SPATIAL] [INDEX | KEY] [index_name] (col_name[length],...) [ASC | DESC]
 ```
 
 **2.** **使用CREATE INDEX创建索引**
 
-```mysql
+```sql
 CREATE [UNIQUE | FULLTEXT | SPATIAL] INDEX index_name 
 ON table_name (col_name[length],...) [ASC | DESC]
 ```
@@ -6018,13 +6018,13 @@ ON table_name (col_name[length],...) [ASC | DESC]
 
 **1.** **使用ALTER TABLE删除索引**
 
-```mysql
+```sql
 ALTER TABLE table_name DROP INDEX index_name;
 ```
 
 **2.** **使用DROP INDEX语句删除索引**
 
-```mysql
+```sql
 DROP INDEX index_name ON table_name;
 ```
 
@@ -6032,7 +6032,7 @@ DROP INDEX index_name ON table_name;
 
 ##### **2.1** **支持降序索引**
 
-```mysql
+```sql
 CREATE TABLE ts1(a int,b int,index idx_a_b(a,b desc));
 ```
 
@@ -6042,7 +6042,7 @@ CREATE TABLE ts1(a int,b int,index idx_a_b(a,b desc));
 
 **1.** **创建表时直接创建** 
 
-```mysql
+```sql
 CREATE TABLE tablename( 
     propname1 type1[CONSTRAINT1], 
     propname2 type2[CONSTRAINT2], 
@@ -6054,21 +6054,21 @@ CREATE TABLE tablename(
 
 **2.** **在已经存在的表上创建**
 
-```mysql
+```sql
 CREATE INDEX indexname 
 ON tablename(propname[(length)]) INVISIBLE;
 ```
 
 **3.** **通过ALTER TABLE语句创建**
 
-```mysql
+```sql
 ALTER TABLE tablename 
 ADD INDEX indexname (propname [(length)]) INVISIBLE;
 ```
 
 **4.** **切换索引可见状态**
 
-```mysql
+```sql
 ALTER TABLE tablename ALTER INDEX index_name INVISIBLE; #切换成隐藏索引 
 ALTER TABLE tablename ALTER INDEX index_name VISIBLE; #切换成非隐藏索引
 ```
@@ -6122,7 +6122,7 @@ ALTER TABLE tablename ALTER INDEX index_name VISIBLE; #切换成非隐藏索引
 
 区分度计算公式：
 
-```mysql
+```sql
 count(distinct left(列名, 索引长度))/count(*)
 ```
 
@@ -6174,7 +6174,7 @@ count(distinct left(列名, 索引长度))/count(*)
 
 #### **1.** **统计SQL的查询成本：last_query_cost**
 
-```mysql
+```sql
 SHOW STATUS LIKE 'last_query_cost';
 ```
 
@@ -6197,23 +6197,23 @@ MySQL的慢查询日志，用来记录在MySQL中`响应时间超过阈值`的�
 
 **1.** **开启slow_query_log**
 
-```mysql
+```sql
 set global slow_query_log='ON';
 ```
 
 查看下慢查询日志是否开启，以及慢查询日志文件的位置：
 
-```mysql
+```sql
 show variables like `%slow_query_log%`;
 ```
 
 **2.** **修改long_query_time阈值**
 
-```mysql
+```sql
 show variables like '%long_query_time%';
 ```
 
-```mysql
+```sql
 #测试发现：设置global的方式对当前session的long_query_time失效。对新连接的客户端有效。所以可以一并 执行下述语句 
 mysql > set global long_query_time = 1; 
 mysql> show global variables like '%long_query_time%'; 
@@ -6224,7 +6224,7 @@ mysql> show variables like '%long_query_time%';
 
 ##### **2.2** **查看慢查询数目**
 
-```mysql
+```sql
 SHOW GLOBAL STATUS LIKE '%Slow_queries%';
 ```
 
@@ -6255,13 +6255,13 @@ slow_query_log=OFF
 
 **方式2：临时性方式**
 
-```mysql
+```sql
 SET GLOBAL slow_query_log=off;
 ```
 
 #### **3.** **查看** **SQL** **执行成本：SHOW PROFILE**
 
-```mysql
+```sql
 show variables like 'profiling';
 #开启
 set profiling = 'ON';
@@ -6274,7 +6274,7 @@ show profile cpu,block io for query 2;
 
 ##### **4.1** **基本语法**
 
-```mysql
+```sql
 EXPLAIN SELECT select_options 
 #或者
 DESCRIBE SELECT select_options
@@ -6367,7 +6367,7 @@ TREE格式是8.0.16版本之后引入的新格式，主要根据查询的`各个
 
 ##### **5.2 SHOW WARNINGS的使用** 
 
-```mysql
+```sql
 mysql> EXPLAIN SELECT s1.key1, s2.key1 FROM s1 LEFT JOIN s2 ON s1.key1 = s2.key1 WHERE s2.common_field IS NOT NULL;
 # 查看优化后的执行语句
 mysql> SHOW WARNINGS\G
@@ -6375,7 +6375,7 @@ mysql> SHOW WARNINGS\G
 
 #### **6.** **分析优化器执行计划：trace**
 
-```mysql
+```sql
 # 开启
 SET optimizer_trace="enabled=on",end_markers_in_json=on; 
 # 设置大小
@@ -6391,7 +6391,7 @@ select * from information_schema.optimizer_trace\G
 
 **索引情况**
 
-```mysql
+```sql
 #1. 查询冗余索引 
 select * from sys.schema_redundant_indexes; 
 #2. 查询未使用过的索引 
@@ -6402,7 +6402,7 @@ select index_name,rows_selected,rows_inserted,rows_updated,rows_deleted from sys
 
 **表相关**
 
-```mysql
+```sql
 # 1. 查询表的访问量 
 select table_schema,table_name,sum(io_read_requests+io_write_requests) as io from sys.schema_table_statistics group by table_schema,table_name order by io desc; 
 # 2. 查询占用bufferpool较多的表 
@@ -6414,7 +6414,7 @@ select * from sys.statements_with_full_table_scans where db='dbname';
 
 **语句相关**
 
-```mysql
+```sql
 #1. 监控SQL执行的频率 
 select db,exec_count,query from sys.statement_analysis order by exec_count desc; 
 #2. 监控使用了排序的SQL 
@@ -6427,7 +6427,7 @@ from sys.statement_analysis where tmp_tables>0 or tmp_disk_tables >0 order by (t
 
 **IO相关**
 
-```mysql
+```sql
 #1. 查看消耗磁盘IO的文件 
 select file,avg_read,avg_write,avg_read+avg_write as avg_io
 from sys.io_global_by_file_by_bytes order by avg_read limit 10;
@@ -6435,7 +6435,7 @@ from sys.io_global_by_file_by_bytes order by avg_read limit 10;
 
 **Innodb** **相关**
 
-```mysql
+```sql
 #1. 行锁阻塞情况 
 select * from sys.innodb_lock_waits;
 ```
@@ -6564,7 +6564,7 @@ Index Nested-Loop Join其优化的思路主要是为了`减少内层表数据的
 
 在索引上完成排序分页操作，最后根据主键关联回原表查询所需要的其他列内容。
 
-```mysql
+```sql
 EXPLAIN SELECT * FROM student t,(SELECT id FROM student ORDER BY id LIMIT 2000000,10) a
 WHERE t.id = a.id;
 ```
@@ -6573,7 +6573,7 @@ WHERE t.id = a.id;
 
 该方案适用于主键自增的表，可以把Limit 查询转换成某个位置的查询。
 
-```mysql
+```sql
 EXPLAIN SELECT * FROM student WHERE id > 2000000 LIMIT 10;
 ```
 
@@ -6856,7 +6856,7 @@ ER模型也叫做`实体关系模型`，是用来描述现实生活中客观存�
 
 16. 【示范】一个较为规范的建表语句：
 
-```mysql
+```sql
 CREATE TABLE user_info ( 
     `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增主键', 
     `user_id` bigint(11) NOT NULL COMMENT '用户id', 
@@ -7061,7 +7061,7 @@ CREATE TABLE user_info (
 
 **1.** **分析表**
 
-```mysql
+```sql
 ANALYZE [LOCAL | NO_WRITE_TO_BINLOG] TABLE tbl_name[,tbl_name]…
 ```
 
@@ -7073,7 +7073,7 @@ ANALYZE TABLE分析后的统计结果会反应到`cardinality`的值，该值统
 
 **2.** **检查表** 
 
-```mysql
+```sql
 CHECK TABLE tbl_name [, tbl_name] ... [option] ... option = {QUICK | FAST | MEDIUM | EXTENDED | CHANGED}
 ```
 
@@ -7081,7 +7081,7 @@ MySQL中可以使用`CHECK TABLE`语句来检查表。CHECK TABLE语句能够检
 
 **3.** **优化表**
 
-```mysql
+```sql
 OPTIMIZE [LOCAL | NO_WRITE_TO_BINLOG] TABLE tbl_name [, tbl_name] ...
 ```
 
@@ -7149,7 +7149,7 @@ OPTIMIZE TABLE 语句对InnoDB和MyISAM类型的表都有效。该语句在执�
 
 **步骤1：** `START TRANSACTION`或者`BEGIN`，作用是显式开启一个事务。
 
-```mysql
+```sql
 mysql> BEGIN; 
 #或者 
 mysql> START TRANSACTION;
@@ -7167,12 +7167,12 @@ mysql> START TRANSACTION;
 
 **步骤3：**提交事务 或 中止事务（即回滚事务）
 
-```mysql
+```sql
 # 提交事务。当提交事务后，对数据库的修改是永久性的。
 mysql> COMMIT;
 ```
 
-```mysql
+```sql
 # 回滚事务。即撤销正在进行的所有没有提交的修改 
 mysql> ROLLBACK; 
 
@@ -7182,12 +7182,12 @@ mysql> ROLLBACK TO [SAVEPOINT]
 
 其中关于SAVEPOINT相关操作有：
 
-```mysql
+```sql
 # 在事务中创建保存点，方便后续针对保存点进行回滚。一个事物中可以存在多个保存点。
 SAVEPOINT 保存点名称;
 ```
 
-```mysql
+```sql
 # 删除某个保存点
 RELEASE SAVEPOINT 保存点名称;
 ```
@@ -7256,7 +7256,7 @@ RELEASE SAVEPOINT 保存点名称;
 
 ##### **3.3** **如何设置事务的隔离级别**
 
-```mysql
+```sql
 SET [GLOBAL|SESSION] TRANSACTION ISOLATION LEVEL 隔离级别; 
 #其中，隔离级别格式： 
 > READ UNCOMMITTED 
@@ -7267,7 +7267,7 @@ SET [GLOBAL|SESSION] TRANSACTION ISOLATION LEVEL 隔离级别;
 
 或者：
 
-```mysql
+```sql
 SET [GLOBAL|SESSION] TRANSACTION_ISOLATION = '隔离级别' 
 #其中，隔离级别格式： 
 > READ-UNCOMMITTED 
@@ -7460,7 +7460,7 @@ InnoDB对undo log的管理采用段的方式，也就是`回滚段（rollback se
 
 **当我们执行INSERT时：**
 
-```mysql
+```sql
 begin; 
 INSERT INTO user (name) VALUES ("tom");
 ```
@@ -7471,7 +7471,7 @@ INSERT INTO user (name) VALUES ("tom");
 
 ![image-20220404094105525](https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202204040941624.png)
 
-```mysql
+```sql
 UPDATE user SET id=2 WHERE id=1;
 ```
 
@@ -7567,7 +7567,7 @@ redo log是物理日志，记录的是数据页的物理变化，undo log不是r
 
 - 对读取的记录加`S锁`：
 
-```mysql
+```sql
 SELECT ... LOCK IN SHARE MODE;
 # 或
 SELECT ... FOR SHARE; #(8.0新增语法)
@@ -7575,7 +7575,7 @@ SELECT ... FOR SHARE; #(8.0新增语法)
 
 - 对读取的记录加`X锁`：
 
-```mysql
+```sql
 SELECT ... FOR UPDATE;
 ```
 
@@ -7627,14 +7627,14 @@ InnoDB 支持`多粒度锁（multiple granularity locking）`，它允许`行级
 
 - **意向共享锁**（intention shared lock, IS）：事务有意向对表中的某些行加**共享锁**（S锁）
 
-```mysql
+```sql
 -- 事务要获取某些行的 S 锁，必须先获得表的 IS 锁。 
 SELECT column FROM table ... LOCK IN SHARE MODE;
 ```
 
 - **意向排他锁**（intention exclusive lock, IX）：事务有意向对表中的某些行加**排他锁**（X锁）
 
-```mysql
+```sql
 -- 事务要获取某些行的 X 锁，必须先获得表的 IX 锁。 
 SELECT column FROM table ... FOR UPDATE;
 ```
@@ -7725,7 +7725,7 @@ InnoDB与MyISAM的最大不同有两点：一是支持事务；二是采用了�
 
 有时候我们既想`锁住某条记录`，又想`阻止`其他事务在该记录前边的`间隙插入新记录`，所以InnoDB就提出了一种称之为`Next-Key Locks`的锁，官方的类型名称为：`LOCK_ORDINARY`，我们也可以简称为`next-key锁`。Next-Key Locks是在存储引擎`innodb`、事务级别在`可重复读`的情况下使用的数据库锁，innodb默认的锁就是Next-Key locks。 
 
-```mysql
+```sql
 begin; 
 select * from student where id <=8 and id > 3 for update;
 ```
@@ -7796,7 +7796,7 @@ select * from student where id <=8 and id > 3 for update;
 
 全局锁的命令：
 
-```mysql
+```sql
 Flush tables with read lock
 ```
 
@@ -7878,7 +7878,7 @@ Flush tables with read lock
 
 #### **5.** **锁监控**
 
-```mysql
+```sql
 mysql> show status like 'innodb_row_lock%';
 ```
 
@@ -8028,7 +8028,7 @@ ReadView就是事务在使用MVCC机制进行快照读操作时产生的读视�
 
 步骤1：事务 A 开始第一次查询数据，查询的 SQL 语句如下。
 
-```mysql
+```sql
 select * from student where id >= 1;
 ```
 
@@ -8040,7 +8040,7 @@ select * from student where id >= 1;
 
 步骤2：接着事务 B(trx_id=30)，往表 student 中新插入两条数据，并提交事务。
 
-```mysql
+```sql
 insert into student(id,name) values(2,'李四'); 
 insert into student(id,name) values(3,'王五');
 ```
@@ -8104,7 +8104,7 @@ MySQL有不同类型的日志文件，用来存储不同类型的日志，分为
 
 ##### **2.1** **查看当前状态** 
 
-```mysql
+```sql
 mysql> SHOW VARIABLES LIKE '%general%';
 ```
 
@@ -8120,7 +8120,7 @@ general_log_file=[path[filename]] #日志文件所在目录路径，filename为�
 
 **方式2：临时性方式**
 
-```mysql
+```sql
 SET GLOBAL general_log=on; # 开启通用查询日志
 SET GLOBAL general_log_file=’path/filename’; # 设置日志文件保存位置
 SET GLOBAL general_log=off; # 关闭通用查询日志
@@ -8138,7 +8138,7 @@ general_log=OFF
 
 **方式2：临时性方式**
 
-```mysql
+```sql
 SET GLOBAL general_log=off;
 SHOW VARIABLES LIKE 'general_log%';
 ```
@@ -8156,7 +8156,7 @@ log-error=[path/[filename]] #path为日志文件所在的目录路径，filename
 
 ##### **3.2** **查看日志**
 
-```mysql
+```sql
 mysql> SHOW VARIABLES LIKE 'log_err%';
 ```
 
@@ -8171,7 +8171,7 @@ mysqladmin -uroot -p flush-logs
 
 ##### **4.1** **查看默认情况**
 
-```mysql
+```sql
 mysql> show variables like '%log_bin%';
 ```
 
@@ -8201,7 +8201,7 @@ chown -R -v mysql:mysql binlog
 
 **方式2：临时性方式**
 
-```mysql
+```sql
 # global 级别 
 mysql> set global sql_log_bin=0; 
 ERROR 1228 (HY000): Variable 'sql_log_bin' is a SESSION variable and can`t be used with SET GLOBAL 
@@ -8213,13 +8213,13 @@ Query OK, 0 rows affected (0.01 秒)
 
 ##### **4.3** **查看日志**
 
-```mysql
+```sql
 mysqlbinlog -v "/var/lib/mysql/binlog/atguigu-bin.000002"
 # 不显示binlog格式的语句
 mysqlbinlog -v --base64-output=DECODE-ROWS "/var/lib/mysql/binlog/atguigu-bin.000002"
 ```
 
-```mysql
+```sql
 # 可查看参数帮助 
 mysqlbinlog --no-defaults --help 
 
@@ -8232,7 +8232,7 @@ mysqlbinlog --no-defaults --base64-output=decode-rows -vv atguigu-bin.000002 |gr
 
 上面这种办法读取出binlog日志的全文内容比较多，不容易分辨查看到pos点信息，下面介绍一种更为方便的查询命令：
 
-```mysql
+```sql
 mysql> show binlog events [IN 'log_name'] [FROM pos] [LIMIT [offset,] row_count];
 ```
 
@@ -8241,7 +8241,7 @@ mysql> show binlog events [IN 'log_name'] [FROM pos] [LIMIT [offset,] row_count]
 - `LIMIT [offset]`：偏移量(不指定就是0) 
 - `row_count`:查询总条数（不指定就是所有行）
 
-```mysql
+```sql
 mysql> show binlog events in 'atguigu-bin.000002';
 ```
 
@@ -8264,7 +8264,7 @@ mysqlbinlog [option] filename|mysql –uuser -ppass;
 
 **1. PURGE MASTER LOGS：删除指定日志文件**
 
-```mysql
+```sql
 PURGE {MASTER | BINARY} LOGS TO ‘指定日志文件名’ 
 PURGE {MASTER | BINARY} LOGS BEFORE ‘指定日期’
 ```
@@ -8571,7 +8571,7 @@ Query OK, 1 row affected (0.01 sec)
 
 **1.** **使用SELECT…INTO OUTFILE导出文本文件** 
 
-```mysql
+```sql
 SHOW GLOBAL VARIABLES LIKE '%secure%';
 SELECT * FROM account INTO OUTFILE "/var/lib/mysql-files/account.txt";
 ```
@@ -8594,7 +8594,7 @@ mysql -uroot -p --execute="SELECT * FROM account;" atguigu> "/var/lib/mysql-file
 
 **1.** **使用LOAD DATA INFILE方式导入文本文件**
 
-```mysql
+```sql
 LOAD DATA INFILE '/var/lib/mysql-files/account_0.txt' INTO TABLE atguigu.account;
 # 或
 LOAD DATA INFILE '/var/lib/mysql-files/account_1.txt' INTO TABLE atguigu.account FIELDS TERMINATED BY ',' ENCLOSED BY '\"';

@@ -128,7 +128,7 @@ MySQL 安装
 
 ![image-20220709210041292](https://attach.blog.wen7.online/20220709210041.png)
 
-```mysql
+```sql
 net start	服务名称
 net stop	服务名称
 ```
