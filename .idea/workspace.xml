@@ -5,11 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59a2fc9d-d226-484d-9462-f50490d44ec8" name="Changes" comment="导航栏 nav">
-      <change afterPath="$PROJECT_DIR$/docs/.vitepress/theme/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/components/VisitorPanel.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/frontend/html/00000_前端概述.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/frontend/html/000_HTML大纲.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML a标签.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML form表单.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML img图片.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML列表.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML基础标签.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML搞笑图片.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML简介.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/frontend/html/IntelliJ IDEA创建静态web.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/frontend/html/IntelliJ IDEA快捷生成 HTML.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/chunk-LLU7DL6N.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/chunk-LLU7DL6N.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/giscus-BNK3dBIH-YISHHA3T.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/giscus-BNK3dBIH-YISHHA3T.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vitepress/config.mts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/config.mts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/theme/Layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/theme/Layout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/theme/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/theme/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/src/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +93,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "F:/xj/WenBlog/docs/src",
+    "last_opened_file_path": "F:/xj/WenBlog/docs/src/frontend/html",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,17 +112,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\xj\WenBlog\docs\src\frontend\html" />
       <recent name="F:\xj\WenBlog\docs\src" />
       <recent name="F:\xj\WenBlog\docs\.vitepress" />
       <recent name="F:\xj\WenBlog\docs\src\public" />
       <recent name="F:\xj\WenBlog\docs\public" />
-      <recent name="F:\xj\WenBlog\docs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\xj\WenBlog\docs\.vitepress" />
       <recent name="F:\xj\WenBlog\docs\src" />
-      <recent name="F:\xj\WenBlog\docs\src\social" />
       <recent name="F:\xj\WenBlog\docs" />
+      <recent name="F:\xj\WenBlog\docs\.vitepress" />
+      <recent name="F:\xj\WenBlog\docs\src\social" />
       <recent name="E:\VitePress\docs\.vitepress" />
     </key>
   </component>
@@ -137,7 +165,7 @@
       <workItem from="1731994549980" duration="1639000" />
       <workItem from="1731998496622" duration="37000" />
       <workItem from="1731998541100" duration="14005000" />
-      <workItem from="1732069422714" duration="5987000" />
+      <workItem from="1732069422714" duration="12372000" />
     </task>
     <task id="LOCAL-00001" summary="测试发布">
       <option name="closed" value="true" />
@@ -283,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732073128751</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="导航栏 nav">
+      <option name="closed" value="true" />
+      <created>1732080778526</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732080778526</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

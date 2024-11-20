@@ -8,5 +8,8 @@
     "docs:dev": "vitepress dev docs --host 0.0.0.0",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "busuanzi.pure.js": "^1.0.3"
   }
 }

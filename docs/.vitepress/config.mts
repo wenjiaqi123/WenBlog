@@ -187,6 +187,17 @@ export default defineConfig({
                     },
                     {
                         items: [
+                            {text: 'GIS', link: '/Html'},
+                        ]
+                    },
+                    {
+                        items: [
+                            {text: '国家编号', link: 'https://baobaoqiming.wen7.online'},
+                            {text: '行政编号', link: 'https://zhaoguilv.wen7.online'},
+                        ]
+                    },
+                    {
+                        items: [
                             {text: '宝宝起名网', link: 'https://baobaoqiming.wen7.online'},
                             {text: '找规律网', link: 'https://zhaoguilv.wen7.online'},
                         ]
