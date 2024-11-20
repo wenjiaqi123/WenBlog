@@ -4,116 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59a2fc9d-d226-484d-9462-f50490d44ec8" name="Changes" comment="测试发布">
-      <change afterPath="$PROJECT_DIR$/docs/.vitepress/utils/generate_nav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vitepress/utils/generate_sidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00000_数据库大纲.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00100_数据库简介.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00101_MySQL简介.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00102_关系型数据库设计规则.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00200_Mysql安装.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00201_MySQL-Window安装.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00202_MySQL-Window卸载.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00203_MySQL_Linux_CentOS_8安装.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00211_图形化工具_Navicat.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00212_图形化工具_Workbeach.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00213_图形化工具_SQLyog.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00214_图形化工具_dbeaver.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/00301_数据库基础操作.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/01100_SQL概述.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/01210_DML_新增.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/01220_DML_删除.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/01230_DML_修改.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/01240_DML_查询.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/01241_DML_子查询.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/01300_DDL_数据库的CRUD.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/01301_DDL_数据表的CRUD.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/02000_数据类型.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/02100_事务.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/02100_约束.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/02101_ACID.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/02102_并发事务问题.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/MySQL数据库笔记.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/MySQL有关 Geometry 说明.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/mysql 中的 if else.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/存储引擎.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/数据库.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/新建 Markdown.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/database/mysql/行列转换.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/000_CSS大纲.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/CSS 布局 - Flex 布局.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/CSS 布局.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/CSS简介.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/伪元素.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/关系选择器.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/函数.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/单位.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/基础选择器.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/字体.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/定位.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/尺寸.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/属性.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/布局.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/引入方式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/弹性盒子.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/文本.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/浮动.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/用户界面.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/盒子模型.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/背景.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/行级-块级元素.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/边框.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/阴影.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/frontend/css/颜色.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/guide/first_chapter/one.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/guide/first_chapter/two.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/guide/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/guide/secondary_chapter/four.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/guide/secondary_chapter/three.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/other/aboutMe.md" afterDir="false" />
+    <list default="true" id="59a2fc9d-d226-484d-9462-f50490d44ec8" name="Changes" comment="导航">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/chunk-V6UFIL65.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/chunk-V6UFIL65.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/giscus-BNK3dBIH-JY7UZ3T4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/giscus-BNK3dBIH-JY7UZ3T4.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vitepress/config.mts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/config.mts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/theme/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/theme/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/theme/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/theme/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/HowUseVitePress.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/Html.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/aa.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/bb.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/cc.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/components/VisitorPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/theme/VisitorPanel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/db.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/dd.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/ee.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/frontend/html/00000_前端概述.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/frontend/html/00000_前端概述.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/frontend/html/000_HTML大纲.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/frontend/html/000_HTML大纲.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/frontend/html/HTML a标签.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML a标签.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/frontend/html/HTML form表单.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML form表单.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/frontend/html/HTML img图片.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML img图片.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/frontend/html/HTML列表.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML列表.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/frontend/html/HTML基础标签.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML基础标签.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/frontend/html/HTML搞笑图片.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML搞笑图片.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/frontend/html/HTML简介.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/frontend/html/HTML简介.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/frontend/html/IntelliJ IDEA创建静态web.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/frontend/html/IntelliJ IDEA创建静态web.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +134,7 @@
       <workItem from="1731994549980" duration="1639000" />
       <workItem from="1731998496622" duration="37000" />
       <workItem from="1731998541100" duration="12249000" />
-      <workItem from="1732106233613" duration="13585000" />
+      <workItem from="1732106233613" duration="15311000" />
     </task>
     <task id="LOCAL-00001" summary="测试发布">
       <option name="closed" value="true" />
@@ -370,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732017793056</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="导航">
+      <option name="closed" value="true" />
+      <created>1732123920337</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732123920337</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,6 +302,7 @@
     </ignored-roots>
     <MESSAGE value="测试发布" />
     <MESSAGE value="导航栏 nav" />
-    <option name="LAST_COMMIT_MESSAGE" value="导航栏 nav" />
+    <MESSAGE value="导航" />
+    <option name="LAST_COMMIT_MESSAGE" value="导航" />
   </component>
 </project>
