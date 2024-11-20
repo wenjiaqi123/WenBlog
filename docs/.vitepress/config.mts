@@ -18,7 +18,6 @@ export default defineConfig({
     },
     vite: {},
     vue: {},
-
     /**
      * 默认主题配置
      */
@@ -29,6 +28,7 @@ export default defineConfig({
         search: {
             provider: 'local'
         },
+        darkModeSwitchLabel: "深浅模式",
         nav: [
             {text: '首页', link: '/'},
             {
@@ -106,6 +106,11 @@ export default defineConfig({
                     },
                     {
                         items: [
+                            {text: '数据库设计', link: '/Html'},
+                        ]
+                    },
+                    {
+                        items: [
                             {text: 'ElasticSearch', link: '/markdown-examples'},
                             {text: 'MongoDB', link: '/markdown-examples'},
                             {text: 'Neo4j', link: '/markdown-examples'},
@@ -168,22 +173,32 @@ export default defineConfig({
                     {text: '设计模式', link: '/Html'},
                     {text: '数据结构与算法', link: '/Html'},
                     {text: '网络', link: '/howusevitepress'},
-                    {text: '架构', link: '/Html'},
                     {
                         items: [
-                            {text: 'VitePress', link: '/Html'},
-                            {text: 'Markdown', link: '/Html'},
+                            {text: '系统架构', link: '/Html'},
+                            {text: '项目管理', link: '/Html'},
                         ]
                     },
                     {
                         items: [
-                            {text: 'BaoBaoQiMing', link: '/Html'},
-                            {text: 'ZhaoGuiLv', link: '/Html'},
+                            {text: '教程 VitePress', link: '/Html'},
+                            {text: '教程 Markdown', link: '/Html'},
+                        ]
+                    },
+                    {
+                        items: [
+                            {text: '宝宝起名网', link: 'https://baobaoqiming.wen7.online'},
+                            {text: '找规律网', link: 'https://zhaoguilv.wen7.online'},
                         ]
                     },
                     {
                         items: [
                             {text: 'ExampleAdmin', link: '/Html'},
+                        ]
+                    },
+                    {
+                        items: [
+                            {text: '关于本站', link: '/Html'},
                         ]
                     }
                 ]
@@ -210,8 +225,12 @@ export default defineConfig({
         ],
 
         returnToTopLabel: "返回顶部",
+        docFooter: {
+            prev: "上一页",
+            next: "下一页"
+        },
         footer: {
-            message: 'Released under the MIT License',
+            // message: 'Released under the MIT License',
             copyright: 'Copyright © wen7'
         },
         // carbonAds: {
@@ -220,9 +239,9 @@ export default defineConfig({
         // }
     },
 
-    // Layout: () => {
-    //     return h(Layout, null, {
-    //         // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    //     });
-    // }
+    Layout: () => {
+        return h(Layout, null, {
+            // https://vitepress.dev/guide/extending-default-theme#layout-slots
+        });
+    }
 })

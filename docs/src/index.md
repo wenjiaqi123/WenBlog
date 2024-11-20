@@ -4,8 +4,8 @@ layout: home
 title: "Blog"
 
 hero:
-  name: "Hello Wen"
-  text: "记录总结"
+  name: "Hello Wen's Blog"
+  text: "闻家奇的博客"
   tagline: Talk is Cheap,Show me the Code.
   image: 
     src: /home_img.png

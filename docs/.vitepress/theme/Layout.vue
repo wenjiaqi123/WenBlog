@@ -3,20 +3,27 @@
     <template #doc-footer-before> </template>
     <template #doc-after>
       <div style="margin-top: 24px">
+        <!--
+          这些值都是在 https://giscus.app/zh-CN 启用 giscus 里的 script 里生成的值,对应粘贴过来
+          repo="github上 账号/仓库名"
+          repo-id="生成的 repo-id"
+          category="选择的 Discussions 类别"
+          category-id="生成的 category-id"
+        -->
         <Giscus
             :key="page.filePath"
-            repo="*"
-            repo-id="*"
-            category="*"
-            category-id="*"
+            repo="wenjiaqi123/WenBlog"
+            repo-id="R_kgDONRbB_A"
+            category-id="DIC_kwDONRbB_M4CkZFr"
             mapping="pathname"
             strict="0"
             reactions-enabled="1"
-            emit-metadata="0"
-            input-position="bottom"
+            emit-metadata="1"
+            input-position="top"
             lang="zh-CN"
             crossorigin="anonymous"
             :theme="isDark ? 'dark' : 'light'"
+            loading="eager"
         />
       </div>
     </template>
