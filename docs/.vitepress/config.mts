@@ -133,6 +133,8 @@ export default defineConfig({
                     {
                         items: [
                             {text: '数据库设计', link: '/Html'},
+                            {text: '国家编号', link: 'https://baobaoqiming.wen7.online'},
+                            {text: '行政编号', link: 'https://zhaoguilv.wen7.online'},
                         ]
                     },
                     {
@@ -211,12 +213,7 @@ export default defineConfig({
                             {text: '教程 Markdown', link: '/Html'},
                         ]
                     },
-                    {
-                        items: [
-                            {text: '国家编号', link: 'https://baobaoqiming.wen7.online'},
-                            {text: '行政编号', link: 'https://zhaoguilv.wen7.online'},
-                        ]
-                    },
+
                     {
                         items: [
                             {text: 'GisOnline', link: '/Html'},
@@ -226,11 +223,7 @@ export default defineConfig({
                         items: [
                             {text: '宝宝起名网', link: 'https://baobaoqiming.wen7.online'},
                             {text: '找规律网', link: 'https://zhaoguilv.wen7.online'},
-                        ]
-                    },
-                    {
-                        items: [
-                            {text: 'ExampleAdmin', link: '/Html'},
+                            {text: 'ExampleAdmin', link: 'https://exampleadmin.wen7.online'},
                         ]
                     },
                     {

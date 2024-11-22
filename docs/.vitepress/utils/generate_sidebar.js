@@ -1,8 +1,14 @@
 import path from "node:path";
 import fs from "node:fs";
 
+console.log("path");
+console.log(path);
+console.log("fs");
+console.log(fs);
+
 // 文件根目录
 const DIR_PATH = path.resolve();
+
 // 白名单,过滤不是文章的文件和文件夹
 const WHITE_LIST = [
     "index.md",
