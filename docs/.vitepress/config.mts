@@ -23,6 +23,7 @@ export default defineConfig({
     },
     vite: {},
     vue: {},
+    ignoreDeadLinks: true,  //忽略死链接
 
 
     /**
