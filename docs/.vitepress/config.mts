@@ -282,7 +282,6 @@ export default defineConfig({
             '/Java/SpringCloudAlibaba': generate_sidebar('/Java/SpringCloudAlibaba'),
             '/Java/JVM': generate_sidebar('/Java/JVM'),
 
-
             '/Golang': generate_sidebar('/Golang'),
 
             '/Database/MySQL': generate_sidebar('/Database/MySQL'),
