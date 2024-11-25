@@ -2,7 +2,7 @@
 
 ## Mapper
 
-![image-20210722045230484](https://attach.blog.wen7.online/20210722045230.png)
+[//]: # (![image-20210722045230484]&#40;https://attach.blog.wen7.online/20210722045230.png&#41;)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -49,13 +49,13 @@
 
 ## Dao 和 Mapper 如何建立连接
 
-![image-20210722043515420](https://attach.blog.wen7.online/20210722043536.png)
+[//]: # (![image-20210722043515420]&#40;https://attach.blog.wen7.online/20210722043536.png&#41;)
 
 ### 命名空间
 
 Mapper 文件中的命名空间 namespace 是接口 UserDao 的全限定名
 
-![image-20210722041820829](https://attach.blog.wen7.online/20210722041821.png)
+[//]: # (![image-20210722041820829]&#40;https://attach.blog.wen7.online/20210722041821.png&#41;)
 
 
 
@@ -63,7 +63,7 @@ Mapper 文件中的命名空间 namespace 是接口 UserDao 的全限定名
 
 Mapper 文件中的 id 需要和方法名一致，同一个 Mapper 文件中的 id 不能重复
 
-![image-20210722042020264](https://attach.blog.wen7.online/20210722042020.png)
+[//]: # (![image-20210722042020264]&#40;https://attach.blog.wen7.online/20210722042020.png&#41;)
 
 
 
@@ -79,7 +79,7 @@ Mapper 文件中的 id 需要和方法名一致，同一个 Mapper 文件中的 
 
 参数个数 ≥ 2，不写
 
-![image-20210722042146833](https://attach.blog.wen7.online/20210722042146.png)
+[//]: # (![image-20210722042146833]&#40;https://attach.blog.wen7.online/20210722042146.png&#41;)
 
 
 
@@ -91,7 +91,7 @@ Mapper 文件中的 id 需要和方法名一致，同一个 Mapper 文件中的 
 
 - 如果是 List<User> 或者 User[ ] ，resultType 也只填写 com.example.demo.entity.User，不需要填写 List
 
-![image-20210722042619556](https://attach.blog.wen7.online/20210722042619.png)
+[//]: # (![image-20210722042619556]&#40;https://attach.blog.wen7.online/20210722042619.png&#41;)
 
 
 
