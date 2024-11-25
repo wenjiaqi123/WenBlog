@@ -8546,7 +8546,7 @@ MySQL –u root –p < all.sql
 ##### **3.3** **从全量备份中恢复单库**
 
 ```shell
-sed -n '/^-- Current Databaseaaaa: `atguigu`/,/^-- Current Databaseaaaa: `/p' all_database.sql > atguigu.sql 
+sed -n '/^-- Current Database: `atguigu`/,/^-- Current Database: `/p' all_database.sql > atguigu.sql 
 #分离完成后我们再导入atguigu.sql即可恢复单个库
 ```
 
