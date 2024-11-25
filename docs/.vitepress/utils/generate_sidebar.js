@@ -1,8 +1,7 @@
 import path from "node:path";
 import fs from "node:fs";
 
-const PATH_DIR_PATH = path.resolve();
-console.log(`运行时项目路径: ${PATH_DIR_PATH}`);
+
 
 //白名单,过滤不是文章的文件和文件夹
 const WHITE_LIST = [
@@ -62,6 +61,8 @@ function getList(prefix, dirPath) {
  * @param pathname
  */
 export default (pathname) => {
+    const PATH_DIR_PATH = path.resolve();
+    console.log(`运行时项目路径: ${PATH_DIR_PATH}`);
 
     const absolutePath = PATH_DIR_PATH + "/docs/src";
 
