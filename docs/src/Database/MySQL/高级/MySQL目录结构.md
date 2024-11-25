@@ -23,7 +23,7 @@ find / -name mysql
 mysql> show variables like 'datadir';
 ```
 
-![image-20230309031929232](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230309031929232.png)
+![image-20230309031929232](https://attach.blog.wen7.online/20241126022023.png)
 
 ##### 方式二
 
@@ -50,12 +50,11 @@ ll /var/lib/mysql
 ll /var/lib/mysql/study_mysql/
 ```
 
-![image-20230309031041510](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230309031041510.png)
+![image-20230309031041510](https://attach.blog.wen7.online/20241126022055.png)
 
 
 
 ### MySQL 命令目录
-
 ```shell
 # /usr/bin 目录是 Linux 存储可执行文件(绿色),
 # /usr/bin 包含是普通用户可以执行的命令(通常是系统自带或软件包安装的，例如 MySQL安装包中的 mysql 命令)
@@ -64,7 +63,7 @@ ll /var/lib/mysql/study_mysql/
 ll /usr/bin | grep mysql
 ```
 
-![image-20230309033412900](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230309033412900.png)
+![image-20230309033412900](https://attach.blog.wen7.online/20241126021957.png)
 
 
 
