@@ -192,7 +192,7 @@ Git diff "文件名"
 
 ![image-20210621212425317](https://attach.blog.wen7.online/20210621212425.png)
 
-```mark
+```markdown
 比较说明
 --- a/HelloWorld.java		表示改动前的文件
 +++ b/HelloWorld.java		表示改动后的文件
@@ -243,7 +243,7 @@ Git diff "文件名"
 
 第五次提交内容
 
-```markd
+```markdown
 我是第五版本
 我是第五版本
 我是第五版本
@@ -387,7 +387,7 @@ Git merge  分支名
 
 ![image-20210621223743275](https://attach.blog.wen7.online/20210621223743.png)
 
-```mark
+```markdown
 冲突说明
 git使用 <<<<<<< 	=======		>>>>>>> 来标注不同的分支的不同内容
 如上图所示
