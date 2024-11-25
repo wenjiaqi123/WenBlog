@@ -75,43 +75,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/xj/WenBlog/docs/src/frontend/html&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.docs:dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;E:\\JetBrains\\WebStorm 2024.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/VitePress/docs/src/database/mysql",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.docs:dev.executor": "Run",
+    "settings.editor.selected.configurable": "http.proxy",
+    "ts.external.directory.path": "E:\\JetBrains\\WebStorm 2024\\WebStorm 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;vue.recent.templates&quot;: [
-      &quot;Vue Composition API Component&quot;
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\xj\WenBlog\docs\src\frontend\html" />
-      <recent name="F:\xj\WenBlog\docs\src" />
-      <recent name="F:\xj\WenBlog\docs\.vitepress" />
+      <recent name="E:\VitePress\docs\src\database\mysql" />
+      <recent name="E:\VitePress\docs\src\frontend\css" />
+      <recent name="E:\VitePress\docs\src\frontend\html" />
       <recent name="F:\xj\WenBlog\docs\src\public" />
       <recent name="F:\xj\WenBlog\docs\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\xj\WenBlog\docs\src" />
-      <recent name="F:\xj\WenBlog\docs" />
-      <recent name="F:\xj\WenBlog\docs\.vitepress" />
-      <recent name="F:\xj\WenBlog\docs\src\social" />
-      <recent name="E:\VitePress\docs\.vitepress" />
+      <recent name="E:\VitePress\docs\src\guide\first_chapter" />
+      <recent name="E:\VitePress\docs\.vitepress\theme" />
+      <recent name="E:\VitePress\docs\src\components" />
+      <recent name="E:\VitePress\docs\src" />
+      <recent name="E:\VitePress\docs" />
     </key>
   </component>
   <component name="RunManager">
@@ -152,8 +152,8 @@
       <workItem from="1731984741967" duration="3252000" />
       <workItem from="1731994549980" duration="1639000" />
       <workItem from="1731998496622" duration="37000" />
-      <workItem from="1731998541100" duration="14005000" />
-      <workItem from="1732069422714" duration="12372000" />
+      <workItem from="1731998541100" duration="12249000" />
+      <workItem from="1732106233613" duration="16486000" />
     </task>
     <task id="LOCAL-00001" summary="测试发布">
       <option name="closed" value="true" />
@@ -283,35 +283,48 @@
       <option name="project" value="LOCAL" />
       <updated>1732017793056</updated>
     </task>
-    <task id="LOCAL-00017" summary="导航栏 nav">
+    <task id="LOCAL-00017" summary="导航">
       <option name="closed" value="true" />
-      <created>1732018579827</created>
+      <created>1732123920337</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1732018579827</updated>
+      <updated>1732123920337</updated>
     </task>
-    <task id="LOCAL-00018" summary="导航栏 nav">
+    <task id="LOCAL-00018" summary="导航">
       <option name="closed" value="true" />
-      <created>1732073128751</created>
+      <created>1732124253053</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1732073128751</updated>
+      <updated>1732124253053</updated>
     </task>
-    <task id="LOCAL-00019" summary="导航栏 nav">
+    <task id="LOCAL-00019" summary="导航">
       <option name="closed" value="true" />
-      <created>1732080778526</created>
+      <created>1732124672218</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1732080778526</updated>
+      <updated>1732124672218</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="导航">
+      <option name="closed" value="true" />
+      <created>1732125076561</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732125076561</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/docs/.vitepress/config.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -332,6 +345,7 @@
     </ignored-roots>
     <MESSAGE value="测试发布" />
     <MESSAGE value="导航栏 nav" />
-    <option name="LAST_COMMIT_MESSAGE" value="导航栏 nav" />
+    <MESSAGE value="导航" />
+    <option name="LAST_COMMIT_MESSAGE" value="导航" />
   </component>
 </project>
