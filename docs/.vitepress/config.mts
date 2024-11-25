@@ -101,7 +101,7 @@ export default defineConfig({
                     },
                     {
                         items: [
-                            {text: 'JVM', link: '/Java/JVM'},
+                            {text: 'JVM_', link: '/Java/JVM'},
                         ]
                     }
                 ]

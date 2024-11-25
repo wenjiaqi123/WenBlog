@@ -7,7 +7,7 @@ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar X
 ```bash
 Java: 这是用来运行Java程序的命令。
 
--agentlib:jdwp: 这个参数告诉Java虚拟机(JVM)加载JDWP代理库。JDWP代理库能够让你通过JDWP协议进行调试。
+-agentlib:jdwp: 这个参数告诉Java虚拟机(JVM_)加载JDWP代理库。JDWP代理库能够让你通过JDWP协议进行调试。
 
 transport=dt_socket: 这个参数指定了调试数据的传输方式，这里是使用socket连接。
 
