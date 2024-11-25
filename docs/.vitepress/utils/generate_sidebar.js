@@ -33,7 +33,7 @@ function getList(prefix, dirPath) {
     const absolutePath = prefix + dirPath;
     const files = fs.readdirSync(absolutePath);                 //读取指定文件夹下的所有文件
     for (let file of files) {
-        let absolutePathName = absolutePath + "\\" + file
+        let absolutePathName = absolutePath + "/" + file
         if (isDirectory(absolutePathName)) {
             // console.log(`遍历目录: ${absolutePathName}`);
             res.push({

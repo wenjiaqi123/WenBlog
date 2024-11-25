@@ -131,7 +131,7 @@ export default defineConfig({
                 text: '数据库', items: [
                     {
                         items: [
-                            {text: 'MySQL', link: '/Database/MySQL/'},
+                            {text: 'MySQL', link: '/Database/MySQL'},
                             {text: 'Redis', link: '/Database/Redis'},
                             {text: 'Postgresql', link: '/Database/Postgresql'},
                         ]
