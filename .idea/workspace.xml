@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59a2fc9d-d226-484d-9462-f50490d44ec8" name="Changes" comment="导航栏 nav">
-      <change afterPath="$PROJECT_DIR$/docs/.vitepress/utils/helloworld.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/chunk-LW4I4DCF.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/chunk-LW4I4DCF.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/config.mts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/config.mts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/utils/generate_sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/utils/generate_sidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,31 +55,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Node.js.helloworld.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "F:/xj/WenBlog/docs/src/frontend/html",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.docs:dev.executor": "Run",
-    "settings.editor.selected.configurable": "http.proxy",
-    "ts.external.directory.path": "E:\\JetBrains\\WebStorm 2024.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Node.js.helloworld.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/xj/WenBlog/docs/src/frontend/html&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.docs:dev.executor&quot;: &quot;Debug&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\JetBrains\\WebStorm 2024.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\xj\WenBlog\docs\src\frontend\html" />
@@ -153,7 +140,7 @@
       <workItem from="1731998496622" duration="37000" />
       <workItem from="1731998541100" duration="14005000" />
       <workItem from="1732069422714" duration="12372000" />
-      <workItem from="1732240787492" duration="8594000" />
+      <workItem from="1732240787492" duration="10207000" />
     </task>
     <task id="LOCAL-00001" summary="测试发布">
       <option name="closed" value="true" />
@@ -307,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732080778526</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="导航栏 nav">
+      <option name="closed" value="true" />
+      <created>1732530844995</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732530844995</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
