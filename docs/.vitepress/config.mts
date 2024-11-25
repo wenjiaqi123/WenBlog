@@ -82,7 +82,7 @@ export default defineConfig({
                     {
                         items: [
                             {text: '基础', link: '/Java/base'},
-                            {text: '并发编程', link: '/Java/concurrent'},
+                            {text: '并发编程', link: '/Java/Concurrent'},
                             {text: 'Maven', link: '/Java/Maven'},
                         ]
                     },
@@ -101,7 +101,7 @@ export default defineConfig({
                     },
                     {
                         items: [
-                            {text: 'JVM', link: '/Java/jvm'},
+                            {text: 'JVM', link: '/Java/JVM'},
                         ]
                     }
                 ]
@@ -126,7 +126,7 @@ export default defineConfig({
                     }
                 ]
             },
-            {text: 'Golang', link: '/golang'},
+            {text: 'Golang', link: '/Golang'},
             {
                 text: '数据库', items: [
                     {
@@ -273,16 +273,17 @@ export default defineConfig({
             '/frontend/qt': generate_sidebar('/frontend/qt'),
 
 
-            '/Java/maven': generate_sidebar('/Java/maven'),
+            '/Java/Maven': generate_sidebar('/Java/Maven'),
+            '/Java/Concurrent': generate_sidebar('/Java/Concurrent'),
             '/Java/SpringBoot': generate_sidebar('/Java/SpringBoot'),
             '/Java/SpringMVC': generate_sidebar('/Java/SpringMVC'),
             '/Java/Mybatis': generate_sidebar('/Java/Mybatis'),
             '/Java/SpringDataJPA': generate_sidebar('/Java/SpringDataJPA'),
             '/Java/SpringCloudAlibaba': generate_sidebar('/Java/SpringCloudAlibaba'),
-            '/Java/jvm': generate_sidebar('/Java/jvm'),
+            '/Java/JVM': generate_sidebar('/Java/JVM'),
 
 
-            '/golang': generate_sidebar('/golang'),
+            '/Golang': generate_sidebar('/Golang'),
 
             '/Database/MySQL': generate_sidebar('/Database/MySQL'),
             '/Database/Redis': generate_sidebar('/Database/Redis'),
