@@ -83,14 +83,14 @@ export default defineConfig({
                         items: [
                             {text: '基础', link: '/Java/base'},
                             {text: '并发编程', link: '/Java/concurrent'},
-                            {text: 'Maven', link: '/Java/maven'},
+                            {text: 'Maven', link: '/Java/Maven'},
                         ]
                     },
                     {
                         items: [
                             {text: 'SpringBoot', link: '/Java/SpringBoot'},
-                            {text: 'SpringMVC', link: '/Java/springmvc'},
-                            {text: 'Mybatis', link: '/Java/mybatis'},
+                            {text: 'SpringMVC', link: '/Java/SpringMVC'},
+                            {text: 'Mybatis', link: '/Java/Mybatis'},
                             {text: 'SpringDataJPA', link: "/Java/SpringDataJPA"},
                         ]
                     },
@@ -202,8 +202,8 @@ export default defineConfig({
             },
             {
                 text: '其他', items: [
-                    {text: 'Git', link: '/Html'},
-                    {text: 'JetBrains', link: '/Html'},
+                    {text: 'Git', link: '/Git'},
+                    {text: 'JetBrains', link: '/other/JetBrains'},
                     {text: '设计模式', link: '/other/DesignPatterns'},
                     {text: '数据结构与算法', link: '/dsa'},
                     {text: '网络', link: '/howusevitepress'},
@@ -215,8 +215,8 @@ export default defineConfig({
                     },
                     {
                         items: [
-                            {text: '教程 VitePress', link: '/Html'},
-                            {text: '教程 Markdown', link: '/Html'},
+                            {text: '教程 VitePress', link: '/other/VitePress'},
+                            {text: '教程 Markdown', link: '/other/Markdown'},
                         ]
                     },
                     {
@@ -275,8 +275,8 @@ export default defineConfig({
 
             '/Java/maven': generate_sidebar('/Java/maven'),
             '/Java/SpringBoot': generate_sidebar('/Java/SpringBoot'),
-            '/Java/springmvc': generate_sidebar('/Java/springmvc'),
-            '/Java/mybatis': generate_sidebar('/Java/mybatis'),
+            '/Java/SpringMVC': generate_sidebar('/Java/SpringMVC'),
+            '/Java/Mybatis': generate_sidebar('/Java/Mybatis'),
             '/Java/SpringDataJPA': generate_sidebar('/Java/SpringDataJPA'),
             '/Java/SpringCloudAlibaba': generate_sidebar('/Java/SpringCloudAlibaba'),
             '/Java/jvm': generate_sidebar('/Java/jvm'),
