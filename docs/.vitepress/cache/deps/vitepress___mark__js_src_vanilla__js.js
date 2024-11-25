@@ -1,6 +1,6 @@
 import "./chunk-BUSYA2B4.js";
 
-// node_modules/mark.js/src/lib/domiterator.js
+// node_modules/mark.javascript/src/lib/domiterator.javascript
 var DOMIterator = class _DOMIterator {
   /**
    * @param {HTMLElement|HTMLElement[]|NodeList|string} ctx - The context DOM
@@ -496,7 +496,7 @@ var DOMIterator = class _DOMIterator {
    */
 };
 
-// node_modules/mark.js/src/lib/mark.js
+// node_modules/mark.javascript/src/lib/mark.javascript
 var Mark = class {
   // eslint-disable-line no-unused-vars
   /**
@@ -1640,7 +1640,7 @@ var Mark = class {
   }
 };
 
-// node_modules/mark.js/src/vanilla.js
+// node_modules/mark.javascript/src/vanilla.javascript
 function Mark2(ctx) {
   const instance = new Mark(ctx);
   this.mark = (sv, opt) => {
@@ -1664,4 +1664,4 @@ function Mark2(ctx) {
 export {
   Mark2 as default
 };
-//# sourceMappingURL=vitepress___mark__js_src_vanilla__js.js.map
+//# sourceMappingURL=vitepress___mark__js_src_vanilla__js.javascript.map

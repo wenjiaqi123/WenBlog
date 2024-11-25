@@ -5,28 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59a2fc9d-d226-484d-9462-f50490d44ec8" name="Changes" comment="导航栏 nav">
+      <change afterPath="$PROJECT_DIR$/docs/.vitepress/utils/helloworld.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/_metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/chunk-LW4I4DCF.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/chunk-LW4I4DCF.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vue.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/@giscus_vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/chunk-LW4I4DCF.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/chunk-LW4I4DCF.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vue_devtools-api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___@vueuse_integrations_useFocusTrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___mark__js_src_vanilla__js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vitepress___minisearch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/cache/deps/vue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vitepress/config.mts" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/config.mts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vitepress/utils/generate_sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vitepress/utils/generate_sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +30,7 @@
       <list>
         <option value="HTML File" />
         <option value="Vue Composition API Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -75,29 +68,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/xj/WenBlog/docs/src/frontend/html&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.docs:dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;E:\\JetBrains\\WebStorm 2024.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Node.js.helloworld.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "js.last.introduce.type": "CONST",
+    "last_opened_file_path": "F:/xj/WenBlog/docs/src/frontend/html",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.docs:dev.executor": "Run",
+    "settings.editor.selected.configurable": "http.proxy",
+    "ts.external.directory.path": "E:\\JetBrains\\WebStorm 2024.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;vue.recent.templates&quot;: [
-      &quot;Vue Composition API Component&quot;
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\xj\WenBlog\docs\src\frontend\html" />
@@ -114,7 +109,10 @@
       <recent name="E:\VitePress\docs\.vitepress" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.docs:dev">
+    <configuration name="helloworld.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/docs/.vitepress/utils/helloworld.js" working-dir="$PROJECT_DIR$/docs/.vitepress/utils">
+      <method v="2" />
+    </configuration>
     <configuration name="docs:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -128,6 +126,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.docs:dev" />
+        <item itemvalue="Node.js.helloworld.js" />
       </list>
     </recent_temporary>
   </component>
@@ -154,6 +153,7 @@
       <workItem from="1731998496622" duration="37000" />
       <workItem from="1731998541100" duration="14005000" />
       <workItem from="1732069422714" duration="12372000" />
+      <workItem from="1732240787492" duration="8594000" />
     </task>
     <task id="LOCAL-00001" summary="测试发布">
       <option name="closed" value="true" />

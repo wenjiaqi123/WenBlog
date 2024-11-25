@@ -1,11 +1,23 @@
 import path from "node:path";
 import fs from "node:fs";
 
-console.log("path");
-console.log(path);
-console.log("fs");
-console.log(fs);
-
+/**
+ * 生成侧边栏
+ * 导航栏 nav 的配置一般两种:要么导航到具体某一个文件,要么导航到某一个目录
+ * 文件示例: {text: 'Mysql', link: '/database/mysql.md'}
+ * 目录示例: {text: 'PGSQL', link: '/database/postgresql'}
+ * .
+ * └── database
+ *     ├── mysql.md
+ *     └── postgresql
+ *         ├── install.md
+ *         ├── sql.md
+ *         └── uninstall.md
+ * 我的期望:
+ * 导航到目录: 生成的侧边栏是目录下的文件,左侧有三个,分别是 install, sql, uninstall
+ * 导航到文件: 生成的侧边栏是文件里的 h2, h3, h4 标题等
+ * @Author: wen7
+ */
 // 文件根目录
 const DIR_PATH = path.resolve();
 
@@ -64,7 +76,7 @@ function getList(params, path1, pathname) {
     return res;
 }
 
-export const set_sidebar = (pathname) => {
+export const generate_sidebar = (pathname) => {
     // 获取pathname的路径
     const dirPath = path.join(DIR_PATH, pathname);
     // 读取pathname下的所有文件或者文件夹

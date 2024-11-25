@@ -1,5 +1,6 @@
 import {defineConfig} from 'vitepress'
-import {set_sidebar} from './utils/generate_sidebar'
+// import {generate_sidebar} from './utils/generate_sidebar.js'
+import generate_sidebar from './utils/helloworld.js'
 
 export default defineConfig({
     /**
@@ -62,8 +63,8 @@ export default defineConfig({
                     {
                         items: [
                             {text: 'HTML', link: '/html'},
-                            {text: 'CSS', link: '/frontend/css'},
-                            {text: 'JavaScript', link: '/Html'}
+                            {text: 'CSS', link: '/css'},
+                            {text: 'JavaScript', link: '/javaScript'}
                         ]
                     },
                     {
@@ -213,7 +214,6 @@ export default defineConfig({
                             {text: '教程 Markdown', link: '/Html'},
                         ]
                     },
-
                     {
                         items: [
                             {text: 'GisOnline', link: '/Html'},
@@ -235,26 +235,31 @@ export default defineConfig({
             },
         ],
 
-
+        /**
+         * 基本使用:可以 [] 类型,单侧边栏,手动指定,切换上面的 nav 时 sidebar不会变化,除非手动修改,应用场景较少
+         * 多侧边栏:但是也不会使用,因为不好维护,应用场景较少
+         *             '/guide': [
+         *                 {
+         *                     text: 'first_chapter',
+         *                     collapsed: true,
+         *                     items: [
+         *                         {text: 'one', link: '/guide/first_chapter/one'},
+         *                         {text: 'two', link: '/guide/first_chapter/two'},
+         *                     ]
+         *                 },
+         *                 {
+         *                     text: 'secondary_chapter',
+         *                     collapsed: true,
+         *                     items: [
+         *                         {text: 'three', link: '/guide/secondary_chapter/three'},
+         *                         {text: 'four', link: '/guide/secondary_chapter/four'},
+         *                     ]
+         *                 }
+         *             ],
+         *  多侧边栏:脚本自动生成,根据 markdown 文件夹生成,应用场景较多
+         */
         sidebar: {
-            '/guide': [
-                {
-                    text: 'first_chapter',
-                    collapsed: true,
-                    items: [
-                        {text: 'one', link: '/guide/first_chapter/one'},
-                        {text: 'two', link: '/guide/first_chapter/two'},
-                    ]
-                },
-                {
-                    text: 'secondary_chapter',
-                    collapsed: true,
-                    items: [
-                        {text: 'three', link: '/guide/secondary_chapter/three'},
-                        {text: 'four', link: '/guide/secondary_chapter/four'},
-                    ]
-                }
-            ],
+            '/css':generate_sidebar('/frontend/css'),
         },
         aside: 'left',
 

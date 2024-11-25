@@ -1,6 +1,6 @@
 import "./chunk-BUSYA2B4.js";
 
-// node_modules/minisearch/dist/es/index.js
+// node_modules/minisearch/dist/es/index.javascript
 function __awaiter(thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function(resolve) {
@@ -1836,4 +1836,4 @@ var SPACE_OR_PUNCTUATION = /[\n\r\p{Z}\p{P}]+/u;
 export {
   MiniSearch as default
 };
-//# sourceMappingURL=vitepress___minisearch.js.map
+//# sourceMappingURL=vitepress___minisearch.javascript.map

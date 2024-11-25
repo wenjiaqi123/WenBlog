@@ -11,7 +11,7 @@ import {
 } from "./chunk-LW4I4DCF.js";
 import "./chunk-BUSYA2B4.js";
 
-// node_modules/tabbable/dist/index.esm.js
+// node_modules/tabbable/dist/index.esm.javascript
 var candidateSelectors = ["input:not([inert])", "select:not([inert])", "textarea:not([inert])", "a[href]:not([inert])", "button:not([inert])", "[tabindex]:not(slot):not([inert])", "audio[controls]:not([inert])", "video[controls]:not([inert])", '[contenteditable]:not([contenteditable="false"]):not([inert])', "details>summary:first-of-type:not([inert])", "details:not([inert])"];
 var candidateSelector = candidateSelectors.join(",");
 var NoElement = typeof Element === "undefined";
@@ -342,7 +342,7 @@ var isFocusable = function isFocusable2(node, options) {
   return isNodeMatchingSelectorFocusable(options, node);
 };
 
-// node_modules/focus-trap/dist/focus-trap.esm.js
+// node_modules/focus-trap/dist/focus-trap.esm.javascript
 function _arrayLikeToArray(r, a) {
   (null == a || a > r.length) && (a = r.length);
   for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
@@ -1107,16 +1107,16 @@ export {
 };
 /*! Bundled license information:
 
-tabbable/dist/index.esm.js:
+tabbable/dist/index.esm.javascript:
   (*!
   * tabbable 6.2.0
   * @license MIT, https://github.com/focus-trap/tabbable/blob/master/LICENSE
   *)
 
-focus-trap/dist/focus-trap.esm.js:
+focus-trap/dist/focus-trap.esm.javascript:
   (*!
   * focus-trap 7.6.2
   * @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
   *)
 */
-//# sourceMappingURL=vitepress___@vueuse_integrations_useFocusTrap.js.map
+//# sourceMappingURL=vitepress___@vueuse_integrations_useFocusTrap.javascript.map
