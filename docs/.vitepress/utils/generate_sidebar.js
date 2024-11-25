@@ -1,88 +1,71 @@
 import path from "node:path";
 import fs from "node:fs";
 
-/**
- * 生成侧边栏
- * 导航栏 nav 的配置一般两种:要么导航到具体某一个文件,要么导航到某一个目录
- * 文件示例: {text: 'Mysql', link: '/database/mysql.md'}
- * 目录示例: {text: 'PGSQL', link: '/database/postgresql'}
- * .
- * └── database
- *     ├── mysql.md
- *     └── postgresql
- *         ├── install.md
- *         ├── sql.md
- *         └── uninstall.md
- * 我的期望:
- * 导航到目录: 生成的侧边栏是目录下的文件,左侧有三个,分别是 install, sql, uninstall
- * 导航到文件: 生成的侧边栏是文件里的 h2, h3, h4 标题等
- * @Author: wen7
- */
-// 文件根目录
-const DIR_PATH = path.resolve();
+const PATH_DIR_PATH = path.resolve();
+console.log(`运行时项目路径: ${PATH_DIR_PATH}`);
 
-// 白名单,过滤不是文章的文件和文件夹
+//白名单,过滤不是文章的文件和文件夹
 const WHITE_LIST = [
-    "index.md",
-    ".vitepress",
-    "node_modules",
-    ".idea",
-    "assets",
-];
+    "*.md",
+    "*.pdf",
+    "*.doc",
+]
+//判断是否是白名单中的文件
+const matchesWhiteList = (fileName) => {
+    return WHITE_LIST.some(pattern => {
+        const extension = pattern.replace("*", "");
+        return fileName.endsWith(extension);
+    });
+}
+//去除末尾的后缀,根据 WHITE_LIST 去除
+const removeSuffix = (fileName) => {
+    return WHITE_LIST.reduce((acc, pattern) => {
+        return acc.replace(pattern.replace("*", ""), "");
+    }, fileName);
+}
 
 // 判断是否是文件夹
 const isDirectory = (path) => fs.lstatSync(path).isDirectory();
 
-// 取差值
-const intersections = (arr1, arr2) =>
-    Array.from(new Set(arr1.filter((item) => !new Set(arr2).has(item))));
-
-// 把方法导出直接使用
-function getList(params, path1, pathname) {
-    // 存放结果
+function getList(prefix, dirPath) {
+    // console.log(`prefix:${prefix},dirPath:${dirPath}`);
     const res = [];
-    // 开始遍历params
-    for (let file in params) {
-        // 拼接目录
-        const dir = path.join(path1, params[file]);
-        // 判断是否是文件夹
-        const isDir = isDirectory(dir);
-        if (isDir) {
-            // 如果是文件夹,读取之后作为下一次递归参数
-            const files = fs.readdirSync(dir);
+    const absolutePath = prefix + dirPath;
+    const files = fs.readdirSync(absolutePath);                 //读取指定文件夹下的所有文件
+    for (let file of files) {
+        let absolutePathName = absolutePath + "\\" + file
+        if (isDirectory(absolutePathName)) {
+            // console.log(`遍历目录: ${absolutePathName}`);
             res.push({
-                text: params[file],
-                collapsible: true,
-                items: getList(files, dir, `${pathname}/${params[file]}`),
-            });
+                text: removeSuffix(file),
+                collapsed: true,
+                items: getList(absolutePath, `/${file}`),
+            })
         } else {
-            // 获取名字
-            const name = path.basename(params[file]);
-            // 排除非 md 文件
-            const suffix = path.extname(params[file]);
-            if (suffix !== ".md") {
-                continue;
+            const b = matchesWhiteList(file);
+            if (b) {
+                // console.log(file + " 是白名单中的文件规则,添加到 res");
+                res.push({
+                    text: removeSuffix(file),
+                    link: `${dirPath}/${file}`
+                })
+            } else {
+                // console.log(file + " 不是白名单中的文件规则,不处理");
             }
-            res.push({
-                text: name,
-                link: `${pathname}/${name}`,
-            });
         }
     }
-    // 对name做一下处理，把后缀删除
-    res.map((item) => {
-        item.text = item.text.replace(/\.md$/, "");
-    });
     return res;
 }
 
-export const generate_sidebar = (pathname) => {
-    // 获取pathname的路径
-    const dirPath = path.join(DIR_PATH, pathname);
-    // 读取pathname下的所有文件或者文件夹
-    const files = fs.readdirSync(dirPath);
-    // 过滤掉
-    const items = intersections(files, WHITE_LIST);
-    // getList 函数后面会讲到
-    return getList(items, dirPath, pathname);
-};
+/**
+ * 根据目录 path 获取该目录下的所有文件的
+ * @param pathname
+ */
+export default (pathname) => {
+
+    const absolutePath = PATH_DIR_PATH + "/docs/src";
+
+    let list = getList(absolutePath, pathname);
+    console.log(`${pathname} 侧边栏列表 list: ${list}`);
+    return list;
+}

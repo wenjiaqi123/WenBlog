@@ -1,4 +1,4 @@
-// node_modules/@vue/shared/dist/shared.esm-bundler.javascript
+// node_modules/@vue/shared/dist/shared.esm-bundler.js
 function makeMap(str) {
   const map2 = /* @__PURE__ */ Object.create(null);
   for (const key of str.split(",")) map2[key] = 1;
@@ -302,7 +302,7 @@ var stringifySymbol = (v, i = "") => {
   );
 };
 
-// node_modules/@vue/reactivity/dist/reactivity.esm-bundler.javascript
+// node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js
 function warn(msg, ...args) {
   console.warn(`[Vue warn] ${msg}`, ...args);
 }
@@ -2072,7 +2072,7 @@ function traverse(value, depth = Infinity, seen) {
   return value;
 }
 
-// node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.javascript
+// node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js
 var stack = [];
 function pushWarningContext(vnode) {
   stack.push(vnode);
@@ -10487,7 +10487,7 @@ var resolveFilter = null;
 var compatUtils = null;
 var DeprecationTypes = null;
 
-// node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.javascript
+// node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
 var policy = void 0;
 var tt = typeof window !== "undefined" && window.trustedTypes;
 if (tt) {
@@ -12311,7 +12311,7 @@ var initDirectivesForSSR = () => {
   }
 };
 
-// node_modules/vue/dist/vue.runtime.esm-bundler.javascript
+// node_modules/vue/dist/vue.runtime.esm-bundler.js
 function initDev() {
   {
     initCustomFormatter();
@@ -12501,7 +12501,7 @@ export {
 };
 /*! Bundled license information:
 
-@vue/shared/dist/shared.esm-bundler.javascript:
+@vue/shared/dist/shared.esm-bundler.js:
   (**
   * @vue/shared v3.5.13
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
@@ -12509,14 +12509,14 @@ export {
   **)
   (*! #__NO_SIDE_EFFECTS__ *)
 
-@vue/reactivity/dist/reactivity.esm-bundler.javascript:
+@vue/reactivity/dist/reactivity.esm-bundler.js:
   (**
   * @vue/reactivity v3.5.13
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
 
-@vue/runtime-core/dist/runtime-core.esm-bundler.javascript:
+@vue/runtime-core/dist/runtime-core.esm-bundler.js:
   (**
   * @vue/runtime-core v3.5.13
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
@@ -12524,7 +12524,7 @@ export {
   **)
   (*! #__NO_SIDE_EFFECTS__ *)
 
-@vue/runtime-dom/dist/runtime-dom.esm-bundler.javascript:
+@vue/runtime-dom/dist/runtime-dom.esm-bundler.js:
   (**
   * @vue/runtime-dom v3.5.13
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
@@ -12532,11 +12532,11 @@ export {
   **)
   (*! #__NO_SIDE_EFFECTS__ *)
 
-vue/dist/vue.runtime.esm-bundler.javascript:
+vue/dist/vue.runtime.esm-bundler.js:
   (**
   * vue v3.5.13
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
 */
-//# sourceMappingURL=chunk-LW4I4DCF.javascript.map
+//# sourceMappingURL=chunk-LW4I4DCF.js.map

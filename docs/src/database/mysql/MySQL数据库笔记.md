@@ -4272,7 +4272,7 @@ SELECT employee_id,last_name FROM cte WHERE n >= 3;
 - 如果你是用rpm安装, 检查一下RPM PACKAGE：
 
 ```shell
-rpm -qa | grep -i mysql # -i 忽略大小写
+rpm -qa | grep -i MySQL # -i 忽略大小写
 ```
 
 - 检查mysql service：
@@ -4292,15 +4292,15 @@ systemctl stop mysqld.service
 **2.** **查看当前** **mysql** **安装状况**
 
 ```shell
-rpm -qa | grep -i mysql
+rpm -qa | grep -i MySQL
 # 或
-yum list installed | grep mysql
+yum list installed | grep MySQL
 ```
 
 **3.** **卸载上述命令查询出的已安装程序**
 
 ```shell
-yum remove mysql-xxx mysql-xxx mysql-xxx mysqk-xxxx
+yum remove MySQL-xxx MySQL-xxx MySQL-xxx mysqk-xxxx
 ```
 
 务必卸载干净，反复执行`rpm -qa | grep -i mysql`确认是否有卸载残留
@@ -4310,7 +4310,7 @@ yum remove mysql-xxx mysql-xxx mysql-xxx mysqk-xxxx
 - 查找相关文件
 
 ```shell
-find / -name mysql
+find / -name MySQL
 ```
 
 - 删除上述命令查找出的相关文件
@@ -4351,11 +4351,11 @@ rpm -qa|grep net-tools
 在mysql的安装文件目录下执行：（必须按照顺序执行）
 
 ```shell
-rpm -ivh mysql-community-common-8.0.25-1.el7.x86_64.rpm 
-rpm -ivh mysql-community-client-plugins-8.0.25-1.el7.x86_64.rpm 
-rpm -ivh mysql-community-libs-8.0.25-1.el7.x86_64.rpm 
-rpm -ivh mysql-community-client-8.0.25-1.el7.x86_64.rpm 
-rpm -ivh mysql-community-server-8.0.25-1.el7.x86_64.rpm
+rpm -ivh MySQL-community-common-8.0.25-1.el7.x86_64.rpm 
+rpm -ivh MySQL-community-client-plugins-8.0.25-1.el7.x86_64.rpm 
+rpm -ivh MySQL-community-libs-8.0.25-1.el7.x86_64.rpm 
+rpm -ivh MySQL-community-client-8.0.25-1.el7.x86_64.rpm 
+rpm -ivh MySQL-community-server-8.0.25-1.el7.x86_64.rpm
 ```
 
 - `rpm`是Redhat Package Manage缩写，通过RPM的管理，用户可以把源代码包装成以rpm为扩展名的文件形式，易于安装。
@@ -4368,7 +4368,7 @@ rpm -ivh mysql-community-server-8.0.25-1.el7.x86_64.rpm
 ##### **2.3** **查看MySQL版本**
 
 ```shell
-mysql --version 
+MySQL --version 
 #或
 mysqladmin --version
 ```
@@ -4378,7 +4378,7 @@ mysqladmin --version
 为了保证数据库目录与文件的所有者为 mysql 登录用户，如果你是以 root 身份运行 mysql 服务，需要执行下面的命令初始化：
 
 ```shell
-mysqld --initialize --user=mysql
+mysqld --initialize --user=MySQL
 ```
 
 说明： --initialize 选项默认以“安全”模式来初始化，则会为 root 用户生成一个密码并将`该密码标记为过期`，登录后你需要设置一个新的密码。生成的`临时密码`会往日志中记录一份。
@@ -4546,7 +4546,7 @@ D --> |"使用操作系统的字符集解码响应的字符串"| A
 #### **1. MySQL8的主要目录结构**
 
 ```shell
-find / -name mysql
+find / -name MySQL
 ```
 
 ##### **1.1** **数据库文件的存放路径** 
@@ -6232,13 +6232,13 @@ SHOW GLOBAL STATUS LIKE '%Slow_queries%';
 
 ```shell
 #得到返回记录集最多的10个SQL 
-mysqldumpslow -s r -t 10 /var/lib/mysql/atguigu-slow.log 
+mysqldumpslow -s r -t 10 /var/lib/MySQL/atguigu-slow.log 
 #得到访问次数最多的10个SQL 
-mysqldumpslow -s c -t 10 /var/lib/mysql/atguigu-slow.log
+mysqldumpslow -s c -t 10 /var/lib/MySQL/atguigu-slow.log
 #得到按照时间排序的前10条里面含有左连接的查询语句 
-mysqldumpslow -s t -t 10 -g "left join" /var/lib/mysql/atguigu-slow.log 
+mysqldumpslow -s t -t 10 -g "left join" /var/lib/MySQL/atguigu-slow.log 
 #另外建议在使用这些命令时结合 | 和more 使用 ，否则有可能出现爆屏情况 
-mysqldumpslow -s r -t 10 /var/lib/mysql/atguigu-slow.log | more
+mysqldumpslow -s r -t 10 /var/lib/MySQL/atguigu-slow.log | more
 ```
 
 ##### **2.4** **关闭慢查询日志**
@@ -8196,7 +8196,7 @@ log-bin="/var/lib/mysql/binlog/atguigu-bin"
 注意：新建的文件夹需要使用mysql用户，使用下面的命令即可。
 
 ```shell
-chown -R -v mysql:mysql binlog
+chown -R -v MySQL:MySQL binlog
 ```
 
 **方式2：临时性方式**
@@ -8216,7 +8216,7 @@ Query OK, 0 rows affected (0.01 秒)
 ```sql
 mysqlbinlog -v "/var/lib/mysql/binlog/atguigu-bin.000002"
 # 不显示binlog格式的语句
-mysqlbinlog -v --base64-output=DECODE-ROWS "/var/lib/mysql/binlog/atguigu-bin.000002"
+mysqlbinlog -v --base64-output=DECODE-ROWS "/var/lib/MySQL/binlog/atguigu-bin.000002"
 ```
 
 ```sql
@@ -8250,7 +8250,7 @@ mysql> show binlog events in 'atguigu-bin.000002';
 mysqlbinlog恢复数据的语法如下：
 
 ```shell
-mysqlbinlog [option] filename|mysql –uuser -ppass;
+mysqlbinlog [option] filename|MySQL –uuser -ppass;
 ```
 
 - `filename`：是日志文件名。
@@ -8457,7 +8457,7 @@ mysqldump –u 用户名称 –h 主机名称 –p密码 待备份的数据库�
 
 ```shell
 mysqldump -uroot -p atguigu>atguigu.sql #备份文件存储在当前目录下
-mysqldump -uroot -p atguigudb1 > /var/lib/mysql/atguigu.sql
+mysqldump -uroot -p atguigudb1 > /var/lib/MySQL/atguigu.sql
 ```
 
 ##### **2.2** **备份全部数据库**
@@ -8525,22 +8525,22 @@ mysqldump -uroot -p -R -E --databases atguigu > fun_atguigu_bak.sql
 #### **3. mysql命令恢复数据**
 
 ```shell
-mysql –u root –p [dbname] < backup.sql
+MySQL –u root –p [dbname] < backup.sql
 ```
 
 ##### **3.1** **单库备份中恢复单库**
 
 ```shell
 #备份文件中包含了创建数据库的语句
-mysql -uroot -p < atguigu.sql
+MySQL -uroot -p < atguigu.sql
 #备份文件中不包含了创建数据库的语句
-mysql -uroot -p atguigu4< atguigu.sql
+MySQL -uroot -p atguigu4< atguigu.sql
 ```
 
 ##### **3.2** **全量备份恢复**
 
 ```shell
-mysql –u root –p < all.sql
+MySQL –u root –p < all.sql
 ```
 
 ##### **3.3** **从全量备份中恢复单库**
@@ -8558,10 +8558,10 @@ cat atguigu.sql | grep --ignore-case 'insert into `class`' > class_data.sql
 #用shell语法分离出创建表的语句及插入数据的语句后 再依次导出即可完成恢复 
 
 use atguigu; 
-mysql> source class_structure.sql; 
+MySQL> source class_structure.sql; 
 Query OK, 0 rows affected, 1 warning (0.00 sec) 
 
-mysql> source class_data.sql; 
+MySQL> source class_data.sql; 
 Query OK, 1 row affected (0.01 sec)
 ```
 
@@ -8587,7 +8587,7 @@ mysqldump -uroot -p -T "/var/lib/mysql-files/" atguigu account --fields-terminat
 **3.** **使用mysql命令导出文本文件**
 
 ```shell
-mysql -uroot -p --execute="SELECT * FROM account;" atguigu> "/var/lib/mysql-files/account.txt"
+MySQL -uroot -p --execute="SELECT * FROM account;" atguigu> "/var/lib/mysql-files/account.txt"
 ```
 
 ##### **4.2** **表的导入**
@@ -8595,13 +8595,13 @@ mysql -uroot -p --execute="SELECT * FROM account;" atguigu> "/var/lib/mysql-file
 **1.** **使用LOAD DATA INFILE方式导入文本文件**
 
 ```sql
-LOAD DATA INFILE '/var/lib/mysql-files/account_0.txt' INTO TABLE atguigu.account;
+LOAD DATA INFILE '/var/lib/MySQL-files/account_0.txt' INTO TABLE atguigu.account;
 # 或
-LOAD DATA INFILE '/var/lib/mysql-files/account_1.txt' INTO TABLE atguigu.account FIELDS TERMINATED BY ',' ENCLOSED BY '\"';
+LOAD DATA INFILE '/var/lib/MySQL-files/account_1.txt' INTO TABLE atguigu.account FIELDS TERMINATED BY ',' ENCLOSED BY '\"';
 ```
 
 **2.** **使用mysqlimport方式导入文本文件**
 
 ```shell
-mysqlimport -uroot -p atguigu '/var/lib/mysql-files/account.txt' --fields-terminated- by=',' --fields-optionally-enclosed-by='\"'
+mysqlimport -uroot -p atguigu '/var/lib/MySQL-files/account.txt' --fields-terminated- by=',' --fields-optionally-enclosed-by='\"'
 ```

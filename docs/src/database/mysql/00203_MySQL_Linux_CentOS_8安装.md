@@ -6,10 +6,10 @@ MySQL CentOS 8 安装
 
 ```shell
 # 查看是否安装过 MySQL
-rpm -qa | grep -i mysql			
+rpm -qa | grep -i MySQL			
 # rpm -q 开启询问模式, -a 查询全部
 # | 管道符
-# grep -i mysql 表示对 rpm -qa 的结果进行删选, -i 不区分大小写,删选包含 mysql 的结果
+# grep -i MySQL 表示对 rpm -qa 的结果进行删选, -i 不区分大小写,删选包含 MySQL 的结果
 ```
 
 ```shell
@@ -38,7 +38,7 @@ systemctl status mysqld.service
 ---
 
 ```shell
-mysql --version
+MySQL --version
 mysqladmin --version
 ```
 
@@ -49,7 +49,7 @@ mysqladmin --version
 
 ```shell
 # --initialize 选项默认以[安全]模式初始化,为 root 用户生成一个【临时】密码,登录后需要重新设置一个新的密码,
-mysqld --initialize --user=mysql
+mysqld --initialize --user=MySQL
 ```
 
 ```sql

@@ -8,7 +8,7 @@ import {
 } from "./chunk-LW4I4DCF.js";
 import "./chunk-BUSYA2B4.js";
 
-// node_modules/@giscus/vue/dist/index.javascript
+// node_modules/@giscus/vue/dist/index.js
 var d = ["id", "host", "repo", "repoid", "category", "categoryid", "mapping", "term", "strict", "reactionsenabled", "emitmetadata", "inputposition", "theme", "lang", "loading"];
 var l = defineComponent({
   __name: "Giscus",
@@ -56,4 +56,4 @@ var l = defineComponent({
 export {
   l as default
 };
-//# sourceMappingURL=@giscus_vue.javascript.map
+//# sourceMappingURL=@giscus_vue.js.map

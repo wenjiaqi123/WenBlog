@@ -1,6 +1,6 @@
 import {defineConfig} from 'vitepress'
 // import {generate_sidebar} from './utils/generate_sidebar.js'
-import generate_sidebar from './utils/helloworld.js'
+import generate_sidebar from './utils/generate_sidebar.js'
 
 export default defineConfig({
     /**
@@ -57,22 +57,22 @@ export default defineConfig({
         darkModeSwitchLabel: "深浅模式",
         nav: [
             {text: '首页', link: '/'},
-            {text: 'guide', link: '/guide'},
+            // {text: 'guide', link: '/guide'},
             {
                 text: '前端', items: [
                     {
                         items: [
-                            {text: 'HTML', link: '/html'},
-                            {text: 'CSS', link: '/css'},
-                            {text: 'JavaScript', link: '/javaScript'}
+                            {text: 'HTML', link: '/frontend/html'},
+                            {text: 'CSS', link: '/frontend/css'},
+                            {text: 'JavaScript', link: '/frontend/javaScript'}
                         ]
                     },
                     {
                         items: [
-                            {text: 'Vue2', link: '/Html'},
-                            {text: 'Vue3', link: '/Html'},
-                            {text: '小程序 Wechat', link: '/markdown-examples'},
-                            {text: '客户端 QT', link: "/markdown-examples"}
+                            {text: 'Vue2', link: '/frontend/vue2'},
+                            {text: 'Vue3', link: '/frontend/vue3'},
+                            // {text: '小程序 Wechat', link: '/frontend/miniapp'},
+                            {text: '客户端 QT', link: "/frontend/qt"}
                         ]
                     }
                 ]
@@ -81,22 +81,27 @@ export default defineConfig({
                 text: 'Java', items: [
                     {
                         items: [
-                            {text: '基础', link: '/Html'},
-                            {text: '并发编程', link: '/Html'},
-                            {text: 'Maven', link: '/Html'},
+                            {text: '基础', link: '/Java/base'},
+                            {text: '并发编程', link: '/Java/concurrent'},
+                            {text: 'Maven', link: '/Java/maven'},
                         ]
                     },
                     {
                         items: [
-                            {text: 'SpringBoot', link: '/markdown-examples'},
-                            {text: 'SpringMVC', link: '/markdown-examples'},
-                            {text: 'Mybatis', link: '/markdown-examples'},
-                            {text: 'SpringDataJPA', link: "/markdown-examples"},
+                            {text: 'SpringBoot', link: '/Java/SpringBoot'},
+                            {text: 'SpringMVC', link: '/Java/springmvc'},
+                            {text: 'Mybatis', link: '/Java/mybatis'},
+                            {text: 'SpringDataJPA', link: "/Java/SpringDataJPA"},
                         ]
                     },
                     {
                         items: [
-                            {text: 'SpringCloudAlibaba', link: '/markdown-examples'},
+                            {text: 'SpringCloudAlibaba', link: '/Java/SpringCloudAlibaba'},
+                        ]
+                    },
+                    {
+                        items: [
+                            {text: 'JVM', link: '/Java/jvm'},
                         ]
                     }
                 ]
@@ -121,31 +126,31 @@ export default defineConfig({
                     }
                 ]
             },
-            {text: 'Golang', link: '/aa'},
+            {text: 'Golang', link: '/golang'},
             {
                 text: '数据库', items: [
                     {
                         items: [
-                            {text: 'MySQL', link: '/database/mysql/01240_DML_查询'},
-                            {text: 'Redis', link: '/markdown-examples'},
-                            {text: 'Postgresql', link: '/Html'},
+                            {text: 'MySQL', link: '/Database/MySQL/'},
+                            {text: 'Redis', link: '/Database/Redis'},
+                            {text: 'Postgresql', link: '/Database/Postgresql'},
                         ]
                     },
                     {
                         items: [
-                            {text: '数据库设计', link: '/Html'},
+                            {text: '数据库设计', link: '/Database/Design'},
                             {text: '国家编号', link: 'https://baobaoqiming.wen7.online'},
                             {text: '行政编号', link: 'https://zhaoguilv.wen7.online'},
                         ]
                     },
                     {
                         items: [
-                            {text: 'ElasticSearch', link: '/markdown-examples'},
-                            {text: 'MongoDB', link: '/markdown-examples'},
-                            {text: 'Neo4j', link: '/markdown-examples'},
-                            {text: 'Milvus', link: '/markdown-examples'},
-                            {text: 'ClickHouse', link: '/markdown-examples'},
-                            {text: 'HBase', link: '/markdown-examples'},
+                            {text: 'ElasticSearch', link: '/Database/ElasticSearch'},
+                            {text: 'MongoDB', link: '/Database/MongoDB'},
+                            {text: 'Neo4j', link: '/Database/Neo4j'},
+                            {text: 'Milvus', link: '/Database/Milvus'},
+                            {text: 'ClickHouse', link: '/Database/ClickHouse'},
+                            {text: 'HBase', link: '/Database/HBase'},
                         ]
                     }
 
@@ -199,8 +204,8 @@ export default defineConfig({
                 text: '其他', items: [
                     {text: 'Git', link: '/Html'},
                     {text: 'JetBrains', link: '/Html'},
-                    {text: '设计模式', link: '/Html'},
-                    {text: '数据结构与算法', link: '/Html'},
+                    {text: '设计模式', link: '/other/DesignPatterns'},
+                    {text: '数据结构与算法', link: '/dsa'},
                     {text: '网络', link: '/howusevitepress'},
                     {
                         items: [
@@ -259,7 +264,41 @@ export default defineConfig({
          *  多侧边栏:脚本自动生成,根据 markdown 文件夹生成,应用场景较多
          */
         sidebar: {
-            '/css':generate_sidebar('/frontend/css'),
+            '/frontend/html': generate_sidebar('/frontend/html'),
+            '/frontend/css': generate_sidebar('/frontend/css'),
+            '/frontend/javaScript': generate_sidebar('/frontend/javaScript'),
+            '/frontend/vue2': generate_sidebar('/frontend/vue2'),
+            '/frontend/vue3': generate_sidebar('/frontend/vue3'),
+            '/frontend/miniapp': generate_sidebar('/frontend/miniapp'),
+            '/frontend/qt': generate_sidebar('/frontend/qt'),
+
+
+            '/Java/maven': generate_sidebar('/Java/maven'),
+            '/Java/SpringBoot': generate_sidebar('/Java/SpringBoot'),
+            '/Java/springmvc': generate_sidebar('/Java/springmvc'),
+            '/Java/mybatis': generate_sidebar('/Java/mybatis'),
+            '/Java/SpringDataJPA': generate_sidebar('/Java/SpringDataJPA'),
+            '/Java/SpringCloudAlibaba': generate_sidebar('/Java/SpringCloudAlibaba'),
+            '/Java/jvm': generate_sidebar('/Java/jvm'),
+
+
+            '/golang': generate_sidebar('/golang'),
+
+            '/Database/MySQL': generate_sidebar('/Database/MySQL'),
+            '/Database/Redis': generate_sidebar('/Database/Redis'),
+            '/Database/Postgresql': generate_sidebar('/Database/Postgresql'),
+            '/Database/Design': generate_sidebar('/Database/Design'),
+            '/Database/ElasticSearch': generate_sidebar('/Database/ElasticSearch'),
+            '/Database/MongoDB': generate_sidebar('/Database/MongoDB'),
+            '/Database/Neo4j': generate_sidebar('/Database/Neo4j'),
+            '/Database/Milvus': generate_sidebar('/Database/Milvus'),
+            '/Database/ClickHouse': generate_sidebar('/Database/ClickHouse'),
+            '/Database/HBase': generate_sidebar('/Database/HBase'),
+
+
+            '/dsa': generate_sidebar('/dsa'),
+            '/other/DesignPatterns': generate_sidebar('/other/DesignPatterns'),
+            '/other/JetBrains': generate_sidebar('/other/JetBrains'),
         },
         aside: 'left',
 
