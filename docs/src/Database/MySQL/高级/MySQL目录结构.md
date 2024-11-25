@@ -8,7 +8,7 @@ find / -name mysql
 # 由于演示机器有其他操作，可能不太一样，但是核心的应该不会有误差
 ```
 
-![image-20230309025441147](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230309025441147.png)
+![image-20230309025441147](https://attach.blog.wen7.online/20241126021911.png)
 
 
 
@@ -32,7 +32,7 @@ mysql> show variables like 'datadir';
 cat /etc/my.cnf
 ```
 
-![image-20230309032312992](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230309032312992.png)
+![image-20230309032312992](https://attach.blog.wen7.online/20241126021917.png)
 
 
 
@@ -43,7 +43,7 @@ cat /etc/my.cnf
 ll /var/lib/mysql
 ```
 
-![image-20230309030920466](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230309030920466.png)
+![image-20230309030920466](https://attach.blog.wen7.online/20241126021914.png)
 
 ```shell
 # 其中 study_mysql 是博主建的数据库,该数据库下有一张 test 表,以 test.ibd 格式存储
@@ -75,5 +75,5 @@ ll /usr/bin | grep mysql
 ls /usr/share/mysql/
 ```
 
-![image-20230309034303984](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230309034303984.png)
+![image-20230309034303984](https://attach.blog.wen7.online/20241126021921.png)
 
