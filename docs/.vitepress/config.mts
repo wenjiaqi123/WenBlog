@@ -101,7 +101,7 @@ export default defineConfig({
                     },
                     {
                         items: [
-                            {text: 'JVM', link: '/Java/JVM'},
+                            {text: 'JavaVirtualMachine', link: '/Java/JavaVirtualMachine'},
                         ]
                     }
                 ]
@@ -280,7 +280,7 @@ export default defineConfig({
             '/Java/Mybatis': generate_sidebar('/Java/Mybatis'),
             '/Java/SpringDataJPA': generate_sidebar('/Java/SpringDataJPA'),
             '/Java/SpringCloudAlibaba': generate_sidebar('/Java/SpringCloudAlibaba'),
-            '/Java/JVM': generate_sidebar('/Java/JVM'),
+            '/Java/JavaVirtualMachine': generate_sidebar('/Java/JavaVirtualMachine'),
 
             '/Golang': generate_sidebar('/Golang'),
 
