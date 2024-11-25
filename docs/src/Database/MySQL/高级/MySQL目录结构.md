@@ -18,7 +18,7 @@ find / -name mysql
 
 ##### 方式一
 
-```mysql
+```sql
 # 查看数据存储在哪里
 mysql> show variables like 'datadir';
 ```

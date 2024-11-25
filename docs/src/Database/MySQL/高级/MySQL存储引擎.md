@@ -10,7 +10,7 @@
 
 ### 查看引擎
 
-```mysql
+```sql
 # 查看有哪些引擎
 show engines;
 
@@ -40,7 +40,7 @@ select @@default_storage_engine;
 
 #### 命令行模式修改
 
-```mysql
+```sql
 set default_sotrage_engine=MyISAM;
 ```
 
@@ -59,7 +59,7 @@ systemctl restart mysqld.service
 
 #### 修改表存储引擎
 
-```mysql
+```sql
 # 一般是表已经建好,修改存储引擎,很少用,一般情况表建好就不会再改存储引擎
 alter table 表名 engine=MyISAM;
 ```

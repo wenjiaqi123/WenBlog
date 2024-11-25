@@ -4,7 +4,7 @@
 
 在修改密码的时候可能会失败
 
-```mysql
+```sql
 alter user 'root'@'%' identified by '123456';
 ```
 
@@ -14,7 +14,7 @@ alter user 'root'@'%' identified by '123456';
 
 - MySQL 8 以前的安全策略是采用 validate_password 插件来检测密码强度的。
 
-  
+
 
 ### 开启安全策略的方式
 
@@ -26,30 +26,30 @@ alter user 'root'@'%' identified by '123456';
 
 #### 方式二：使用命令安装插件（推荐）
 
-```mysql
+```sql
 # 安装插件
 mysql> install plugin validate_password soname 'validate_password.so';
 ```
 
-![image-20230308154544188](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230308154544188.png)
+![image-20230308154544188](https://attach.blog.wen7.online/20241126023044.png)
 
-```mysql
+```sql
 # 卸载插件
 mysql> uninstall plugin validate_password;
 ```
 
-![image-20230308171455965](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230308171455965.png)
+![image-20230308171455965](https://attach.blog.wen7.online/20241126023045.png)
 
 
 
 ### validate_password 说明
 
-```mysql
+```sql
 # 查看密码安全策略的相关属性，可以在安装插件前后分别调用以下命令查看效果。以下效果为安装 validate_password，卸载之后该命令会显示 Empty set (0.00 sec)
 mysql> show variables like 'validate_password%';
 ```
 
-![image-20230308170717474](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230308170717474.png)
+![image-20230308170717474](https://attach.blog.wen7.online/20241126023046.png)
 
 | 参数名称                             | 值     | 参数说明                                                     |
 | ------------------------------------ | ------ | ------------------------------------------------------------ |
@@ -64,23 +64,23 @@ mysql> show variables like 'validate_password%';
 
 如果开启了安全策略，那么密码就需要有大小写，特殊字符，数字组合符合上述配置
 
-```mysql
+```sql
 mysql> alter user 'root'@'%' identified by 'root123456';
 ERROR 1819 (HY000): Your password does not satisfy the current policy requirements  #您的密码不符合当前策略要求
 ```
 
-![image-20230308164743941](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230308164743941.png)
+![image-20230308164743941](https://attach.blog.wen7.online/20241126023047.png)
 
-```mysql
+```sql
 mysql> alter user 'root'@'%' identified by 'Root_123';
 Query OK, 0 rows affected (0.00 sec)	#有大写 R,有小写 oot,有特殊字符 _,有数字 123
 ```
 
-![image-20230308172046315](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230308172046315.png)
+![image-20230308172046315](https://attach.blog.wen7.online/20241126023048.png)
 
 ### 调整策略
 
-```mysql
+```sql
 # 设置密码强度等级为 LOW
 mysql> set global validate_password_policy=LOW;
 
@@ -91,7 +91,7 @@ mysql> set global validate_password_policy=MEDIUM;
 mysql> set global validate_password_policy=STRONG;
 ```
 
-```mysql
+```sql
 # 设置密码长度为1
 mysql> set global validate_password_length=1;
 ```

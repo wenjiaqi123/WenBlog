@@ -40,7 +40,7 @@ Hash 一般是数组 + 链表的情况，比如 Java 语言中的 HashMap 就使
 
   - 思路：增加额外 Hash 列，将列值映射成哈希值，对哈希值再进行索引
 
-  - ```mysql
+  - ```sql
     select *
     from test_table
     where 列B = hash('https://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5%E4%B8%80%E5%91%A8')
@@ -59,7 +59,7 @@ Hash 一般是数组 + 链表的情况，比如 Java 语言中的 HashMap 就使
 
 - ==InnoDB 是不支持 Hash 的，但是提供了 自适应 Hash 索引==
 
-- ```mysql
+- ```sql
   # 查看是否开启 自适应Hash,默认开启
   mysql> show variables like 'innodb_adaptive_hash_index';
   ```

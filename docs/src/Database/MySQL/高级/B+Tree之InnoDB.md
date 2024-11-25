@@ -76,7 +76,7 @@
 
 - 一个数据页为 16 KB，16K x 1024 = 16384 Byte
 
-  - ```mysql
+  - ```sql
     show global status 
     like 'Innodb_page_size';
     ```

@@ -15,7 +15,7 @@ mysql -hlocalhost -P3306 -uroot -p123456
 
 ### 创建用户
 
-```mysql
+```sql
 # 创建用户并赋值密码
 create user '用户名'			 identified by '密码';
 create user '用户名'@'host地址'  identified by '密码';    # 如果指定用户名时不指定 host地址,默认是 %
@@ -24,13 +24,13 @@ create user '用户名'@'host地址'  identified by '密码';    # 如果指定�
 create user 'zhangsan'@'%'      identified by 'zhangsan123';
 ```
 
-![image-20230309122422051](https://attach.blog.wen7.online/20230310003025.png)
+![image-20230309122422051](https://xyb.wyxjava.com/20230310003025.png)
 
 
 
 ### 查询用户
 
-```mysql
+```sql
 # 切换到 mysql 数据库.MySQL(8.0.18版本)会自带4个数据库,information_schema、mysql、performance_schema、sys 
 mysql> use mysql;
 
@@ -40,13 +40,13 @@ mysql> use mysql;
 mysql> select host,user from user;
 ```
 
-![image-20230309121236985](https://attach.blog.wen7.online/20230310003027.png)
+![image-20230309121236985](https://xyb.wyxjava.com/20230310003027.png)
 
 
 
 ### 修改用户
 
-```mysql
+```sql
 # 切换到 mysql 数据库
 mysql> use mysql;
 
@@ -67,7 +67,7 @@ mysql> flush privileges;
 
 因为 delete 删除是删除 user 表中的数据，MySQL 系统中有关用户还有权限等其他表中有涉及，只删除 user 表中的数据其他地方会有残留，类似 windows 卸载软件，如果你只是单纯的删除文件夹，可能注册表中还有残留
 
-```mysql
+```sql
 mysql> delete from mysql.user where host=’%’ and user=’zhang3’;
 
 mysql> flush privileges;
@@ -75,7 +75,7 @@ mysql> flush privileges;
 
 #### drop 删除（推荐）
 
-```mysql
+```sql
 # 删除用户,这里的用户1 指的是【用户名@主机地址】,没写主机地址的默认为 %
 drop user 用户1[,用户2]...;
 
@@ -92,12 +92,12 @@ drop user zhangsan@%,lisi@localhost,wangwu@47.92.52.31;
 
 用户已经登录，当前用户修改当前密码
 
-```mysql
+```sql
 # 官方推荐该方式, user()函数就是指代当前用户和主机地址,例如 root@%,zhangsan@localhost
 alter user user() identified by '新密码';
 ```
 
-```mysql
+```sql
 # 简单
 set password = '新密码';
 ```
@@ -108,7 +108,7 @@ set password = '新密码';
 
 ==需要拥有权限，因为 root 拥有最高权限，可以修改任意账户密码==
 
-```mysql
+```sql
 alter user '用户名'@'主机地址' identified by '新密码'
 alter user '用户名'@'主机地址' identified by '新密码'[,'用户名'@'主机地址' identified by '新密码']...;
 
@@ -116,7 +116,7 @@ alter user '用户名'@'主机地址' identified by '新密码'[,'用户名'@'�
 alter user 'zhangsan'@'%'  identified by 'zhangsan123';
 ```
 
-```mysql
+```sql
 set password for '用户名'@'主机地址' = '新密码';
 
 # 示例
@@ -131,13 +131,13 @@ set password for 'zhangsan'@'%' identified by 'zhangsan123';
 
 ### 查看所有权限
 
-```mysql
+```sql
 # 查看所有的权限
 mysql> show privileges;
 ```
 
 - ==MySQL 8.0.18 版本提供的权限有 62 种：==
-  - Alter、Alter routine、Create、Create routine、Create role、Create temporary tables、Create view、Create user、Delete、Drop、Drop role、Event、Execute、File、Grant option、Index、Insert、Lock tables、Process、Proxy、References、Reload、Replication client、Replication slave、Select、Show databases、Show view、Shutdown、Super、Trigger、Create tablespace、Update、Usage、XA_RECOVER_ADMIN、SHOW_ROUTINE、RESOURCE_GROUP_USER、REPLICATION_APPLIER、INNODB_REDO_LOG_ENABLE、GROUP_REPLICATION_ADMIN、FLUSH_USER_RESOURCES、PERSIST_RO_VARIABLES_ADMIN、ROLE_ADMIN、BACKUP_ADMIN、CONNECTION_ADMIN、SET_USER_ID、SESSION_VARIABLES_ADMIN、RESOURCE_GROUP_ADMIN、INNODB_REDO_LOG_ARCHIVE、BINLOG_ENCRYPTION_ADMIN、REPLICATION_SLAVE_ADMIN、SYSTEM_VARIABLES_ADMIN、SYSTEM_USER、APPLICATION_PASSWORD_ADMIN、TABLE_ENCRYPTION_ADMIN、SERVICE_CONNECTION_ADMIN、AUDIT_ADMIN、BINLOG_ADMIN、ENCRYPTION_KEY_ADMIN、CLONE_ADMIN、FLUSH_OPTIMIZER_COSTS、FLUSH_STATUS、FLUSH_TABLES 
+  - Alter、Alter routine、Create、Create routine、Create role、Create temporary tables、Create view、Create user、Delete、Drop、Drop role、Event、Execute、File、Grant option、Index、Insert、Lock tables、Process、Proxy、References、Reload、Replication client、Replication slave、Select、Show databases、Show view、Shutdown、Super、Trigger、Create tablespace、Update、Usage、XA_RECOVER_ADMIN、SHOW_ROUTINE、RESOURCE_GROUP_USER、REPLICATION_APPLIER、INNODB_REDO_LOG_ENABLE、GROUP_REPLICATION_ADMIN、FLUSH_USER_RESOURCES、PERSIST_RO_VARIABLES_ADMIN、ROLE_ADMIN、BACKUP_ADMIN、CONNECTION_ADMIN、SET_USER_ID、SESSION_VARIABLES_ADMIN、RESOURCE_GROUP_ADMIN、INNODB_REDO_LOG_ARCHIVE、BINLOG_ENCRYPTION_ADMIN、REPLICATION_SLAVE_ADMIN、SYSTEM_VARIABLES_ADMIN、SYSTEM_USER、APPLICATION_PASSWORD_ADMIN、TABLE_ENCRYPTION_ADMIN、SERVICE_CONNECTION_ADMIN、AUDIT_ADMIN、BINLOG_ADMIN、ENCRYPTION_KEY_ADMIN、CLONE_ADMIN、FLUSH_OPTIMIZER_COSTS、FLUSH_STATUS、FLUSH_TABLES
 
 - 比较常用的有：
   - Create  创建数据库、表结构
@@ -153,7 +153,7 @@ mysql> show privileges;
 
 ### 查看用户权限
 
-```mysql
+```sql
 # 查看当前登录用户的权限
 mysql> show grants;
 
@@ -163,7 +163,7 @@ mysql> show grants for current_user();
 mysql> show grants for '用户名'@'主机地址';
 ```
 
-![image-20230309215355136](https://attach.blog.wen7.online/20230310003033.png)
+![image-20230309215355136](https://xyb.wyxjava.com/20230310003033.png)
 
 
 
@@ -177,7 +177,7 @@ mysql> show grants for '用户名'@'主机地址';
 
 ### 授权
 
-```mysql
+```sql
 # 授权给用户权限
 grant 权限1,权限2,权限3...   on 数据库名称.表名称   to  '用户名'@'主机地址' ;
 
@@ -187,7 +187,7 @@ grant all privileges       on  *.*             to  '用户名'@'主机地址';
 
 给相同用户添加权限，==权限叠加==
 
-```mysql
+```sql
 # 给 zhangsan 用户赋予 select 查询权限
 grant select   on study_mysql.test   to  'zhangsan'@'%' ;
 
@@ -201,7 +201,7 @@ grant insert   on study_mysql.test   to  'zhangsan'@'%' ;
 
 **==用户退出重新登录之后才有生效==，用户不退出会仍然保持之前的权限，这有点小坑，但是问题不大**
 
-```mysql
+```sql
 # 回收用户权限
 revoke 权限1,权限2,权限3...   on 数据库名称.表名称   from  '用户名'@'主机地址' ;
 
@@ -215,16 +215,16 @@ revoke all privileges       on  *.*             from  '用户名'@'主机地址'
 
 在 MySQL 数据库中的 mysql 数据库中，还有很多其他的表来记录用户的权限
 
-![image-20230310001158159](https://attach.blog.wen7.online/20230310003209.png)
+![image-20230310001158159](https://xyb.wyxjava.com/20230310003209.png)
 
 - user 表：存储用户信息，==该表中的 Host 和 User 两个字段组成联合主键==
-  - 图中的 `% zhangsan` 和 `localhost zhangsan` 是两条记录![image-20230310002956173](https://attach.blog.wen7.online/20230310003005.png) 
+  - 图中的 `% zhangsan` 和 `localhost zhangsan` 是两条记录![image-20230310002956173](https://xyb.wyxjava.com/20230310003005.png)
 - db 表：Host User 和 DB 数据库名称组成联合主键，用于记录用户和数据库之间的权限关系
-  - ![image-20230310003247915](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230310003247915.png)
+  - ![image-20230310003247915](https://attach.blog.wen7.online/20241126023114.png)
 - tables_priv 表：Host User 和 DB 和 Table_name 组成联合主键，用于记录用户和数据库、数据表之间的权限关系
-  - ![image-20230310003356202](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230310003356202.png)
+  - ![image-20230310003356202](https://attach.blog.wen7.online/20241126023115.png)
 - columns_priv 表：Host User 和 DB 和 Table_name 和 Column_name 组成联合主键，用于记录用户和数据库、数据表、数据列之间的权限关系
-  - ![image-20230310003530204](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230310003530204.png)
+  - ![image-20230310003530204](https://attach.blog.wen7.online/20241126023116.png)
 
 
 
@@ -238,7 +238,7 @@ revoke all privileges       on  *.*             from  '用户名'@'主机地址'
 
 客户端连接服务器时，至少提供  **连接地址、用户名、用户密码** 三个数据，服务器收到请求后，对 **mysql.user 表中的 Host，User，authentication_string** 三个字段匹配，通过之后才能连接进入下一阶段，否则直接拒绝
 
-![image-20230310001459459](https://attach.blog.wen7.online/20230310003011.png)
+![image-20230310001459459](https://xyb.wyxjava.com/20230310003011.png)
 
 
 
@@ -248,7 +248,7 @@ revoke all privileges       on  *.*             from  '用户名'@'主机地址'
 
 1. 先检查 `user` 表，是否符合 host，user 字段
 2. 再检查 `db` 表，是否允许操作 db 表
-3. 再检查 `tables_priv` 表，是否允许操作 table 
+3. 再检查 `tables_priv` 表，是否允许操作 table
 4. 再检查 `columns_priv` 表 ，是否允许操作 column
 
 
@@ -257,14 +257,14 @@ revoke all privileges       on  *.*             from  '用户名'@'主机地址'
 
 ### 创建角色
 
-```mysql
+```sql
 # 创建角色,@主机地址可以省略,默认为 @%
 create role  '角色名称'[@'主机地址'];
 
 create role  '角色名称'[@'主机地址'][.'角色名称'[@'主机地址']];
 ```
 
-```mysql
+```sql
 # 示例:创建 boss 角色
 create role 'boss';
 create role 'boss'@'localhost';
@@ -274,7 +274,7 @@ create role 'boss'@'localhost';
 
 ### 查看角色
 
-```mysql
+```sql
 # 查看当前用户的角色
 select current_role();
 ```
@@ -283,7 +283,7 @@ select current_role();
 
 ### 删除角色
 
-```mysql
+```sql
 drop role '角色名称';
 drop role '角色名称'@'主机地址';
 ```
@@ -292,7 +292,7 @@ drop role '角色名称'@'主机地址';
 
 ### 给角色授权
 
-```mysql
+```sql
 # 授权给角色权限
 grant 权限1,权限2,权限3...   on 数据库名称.表名称   to  '角色名称'@'主机地址' ;
 
@@ -304,7 +304,7 @@ grant all privileges       on  *.*             to  '角色名'@'主机地址';
 
 ### 查看角色授权
 
-```mysql
+```sql
 # 查看角色权限
 show grants for '角色名';
 ```
@@ -313,7 +313,7 @@ show grants for '角色名';
 
 ### 回收角色授权
 
-```mysql
+```sql
 # 回收角色权限
 revoke 权限1,权限2,权限3...   on 数据库名称.表名称   from  '角色名'@'主机地址' ;
 
@@ -325,7 +325,7 @@ revoke all privileges       on  *.*             from  '角色名'@'主机地址'
 
 ### 给用户分配角色
 
-```mysql
+```sql
 grant '角色1'@'主机地址'[,'角色2'@'主机地址']  to '用户名1'@'主机地址'[,用户名2@'主机地址']; 
 
 # 示例:授予马云 boss 角色
@@ -338,7 +338,7 @@ grant boss to user 'mayun'@'%';
 
 用户赋予角色，需要激活才可以使用
 
-```mysql
+```sql
 # 激活用户所拥有的所有角色,用户需要重新登录生效
 set default role all to '用户名1'@'主机地址'[,用户名2@'主机地址'];
 
@@ -350,7 +350,7 @@ set global activate_all_roles_on_login=ON;
 
 ### 撤销用户角色
 
-```mysql
+```sql
 # 撤销用户角色,自己不能撤销自己角色
 revoke 角色1'@'主机地址'[,'角色2'@'主机地址']   from '用户名1'@'主机地址'; 
 ```
@@ -370,7 +370,7 @@ mandatory_roles='role1,role2@%,role3@localhost';
 
 #### 运行时设置
 
-```mysql
+```sql
 set persist mandatory_roles='role1,role2@%,role3@localhost';	# 重启仍然有效
 set global  mandatory_roles='role1,role2@%,role3@localhost';	# 重启失效
 ```

@@ -14,7 +14,7 @@
 
 ### 查看大小写规范
 
-```mysql
+```sql
 # 查看大小写是否敏感
 show variables like '%lower_case_table_names%';
 ```
