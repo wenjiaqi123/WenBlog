@@ -278,7 +278,7 @@ let myFun = function () {
 
 ### index.js
 
-```index.js
+```javascript
 console.log("index.js");
 
 console.log();

@@ -38,7 +38,7 @@
 
 - 上下箭头选择，空格勾选/取消，如果使用哪一个就在前面勾选，有 * 号表示勾选
 
-- ```livecodeserver
+- ```shell
      (*) Choose Vue version					//	版本选择
      (*) Babel                              //  代码编译
      ( ) TypeScript                         //  ts

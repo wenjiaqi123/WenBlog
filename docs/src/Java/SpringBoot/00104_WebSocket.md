@@ -61,7 +61,7 @@ Upgrade: 升级为其他协议
 
 #### 引入依赖
 
-```xml-dtd
+```xml
 <!-- WebSocket 起步依赖-->
 <dependency>
     <groupId>org.springframework.boot</groupId>

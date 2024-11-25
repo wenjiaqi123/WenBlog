@@ -1,4 +1,4 @@
-```xml-dtd
+```xml
 <plugins>
             <!--SpringBoot 打包插件-->
             <plugin>
