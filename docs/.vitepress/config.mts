@@ -147,7 +147,7 @@ export default defineConfig({
                         items: [
                             {text: 'ElasticSearch', link: '/Database/ElasticSearch'},
                             {text: 'MongoDB', link: '/Database/MongoDB'},
-                            {text: 'Neo4j', link: '/Database/Neo4j'},
+                            {text: 'Neo4ja', link: '/Database/Neo4j'},
                             {text: 'Milvus', link: '/Database/Milvus'},
                             {text: 'ClickHouse', link: '/Database/ClickHouse'},
                             {text: 'HBase', link: '/Database/HBase'},
