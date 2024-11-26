@@ -161,7 +161,7 @@ var SearchableMap = class _SearchableMap {
    *
    * ### Usage:
    *
-   * ```javaScript
+   * ```javascript
    * let map = new SearchableMap()
    * map.set("unicorn", 1)
    * map.set("universe", 2)
@@ -241,7 +241,7 @@ var SearchableMap = class _SearchableMap {
    *
    * ### Usage:
    *
-   * ```javaScript
+   * ```javascript
    * let map = new SearchableMap()
    * map.set('hello', 'world')
    * map.set('hell', 'yeah')
@@ -324,7 +324,7 @@ var SearchableMap = class _SearchableMap {
    *
    * ### Example:
    *
-   * ```javaScript
+   * ```javascript
    * // Increment the current value by one
    * searchableMap.update('somekey', (currentValue) => currentValue == null ? 0 : currentValue + 1)
    * ```
@@ -353,7 +353,7 @@ var SearchableMap = class _SearchableMap {
    *
    * ### Example:
    *
-   * ```javaScript
+   * ```javascript
    * const map = searchableMap.fetch('somekey', () => new Map())
    * map.set('foo', 'bar')
    * ```
@@ -510,7 +510,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Examples:
    *
-   * ```javaScript
+   * ```javascript
    * // Create a search engine that indexes the 'title' and 'text' fields of your
    * // documents:
    * const miniSearch = new MiniSearch({ fields: ['title', 'text'] })
@@ -518,7 +518,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### ID Field:
    *
-   * ```javaScript
+   * ```javascript
    * // Your documents are assumed to include a unique 'id' field, but if you want
    * // to use a different field for document identification, you can set the
    * // 'idField' option:
@@ -527,7 +527,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Options and defaults:
    *
-   * ```javaScript
+   * ```javascript
    * // The full set of options (here with their default value) is:
    * const miniSearch = new MiniSearch({
    *   // idField: field that uniquely identifies a document
@@ -1005,7 +1005,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Basic usage:
    *
-   * ```javaScript
+   * ```javascript
    * // Search for "zen art motorcycle" with default options: terms have to match
    * // exactly, and individual terms are joined with OR
    * miniSearch.search('zen art motorcycle')
@@ -1014,21 +1014,21 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Restrict search to specific fields:
    *
-   * ```javaScript
+   * ```javascript
    * // Search only in the 'title' field
    * miniSearch.search('zen', { fields: ['title'] })
    * ```
    *
    * ### Field boosting:
    *
-   * ```javaScript
+   * ```javascript
    * // Boost a field
    * miniSearch.search('zen', { boost: { title: 2 } })
    * ```
    *
    * ### Prefix search:
    *
-   * ```javaScript
+   * ```javascript
    * // Search for "moto" with prefix search (it will match documents
    * // containing terms that start with "moto" or "neuro")
    * miniSearch.search('moto neuro', { prefix: true })
@@ -1036,7 +1036,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Fuzzy search:
    *
-   * ```javaScript
+   * ```javascript
    * // Search for "ismael" with fuzzy search (it will match documents containing
    * // terms similar to "ismael", with a maximum edit distance of 0.2 term.length
    * // (rounded to nearest integer)
@@ -1045,7 +1045,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Combining strategies:
    *
-   * ```javaScript
+   * ```javascript
    * // Mix of exact match, prefix search, and fuzzy search
    * miniSearch.search('ismael mob', {
    *  prefix: true,
@@ -1055,7 +1055,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Advanced prefix and fuzzy search:
    *
-   * ```javaScript
+   * ```javascript
    * // Perform fuzzy and prefix search depending on the search term. Here
    * // performing prefix and fuzzy search only on terms longer than 3 characters
    * miniSearch.search('ismael mob', {
@@ -1066,7 +1066,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Combine with AND:
    *
-   * ```javaScript
+   * ```javascript
    * // Combine search terms with AND (to match only documents that contain both
    * // "motorcycle" and "art")
    * miniSearch.search('motorcycle art', { combineWith: 'AND' })
@@ -1081,7 +1081,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Filtering results:
    *
-   * ```javaScript
+   * ```javascript
    * // Filter only results in the 'fiction' category (assuming that 'category'
    * // is a stored field)
    * miniSearch.search('motorcycle art', {
@@ -1096,7 +1096,7 @@ var MiniSearch = class _MiniSearch {
    * "wildcard" search. This is possible by passing the special value
    * {@link MiniSearch.wildcard} as the query:
    *
-   * ```javaScript
+   * ```javascript
    * // Return search results for all documents
    * miniSearch.search(MiniSearch.wildcard)
    * ```
@@ -1104,7 +1104,7 @@ var MiniSearch = class _MiniSearch {
    * Note that search options such as `filter` and `boostDocument` are still
    * applied, influencing which results are returned, and their order:
    *
-   * ```javaScript
+   * ```javascript
    * // Return search results for all documents in the 'fiction' category
    * miniSearch.search(MiniSearch.wildcard, {
    *   filter: (result) => result.category === 'fiction'
@@ -1117,7 +1117,7 @@ var MiniSearch = class _MiniSearch {
    * and even with different search options, by passing a query expression
    * tree object as the first argument, instead of a string.
    *
-   * ```javaScript
+   * ```javascript
    * // Search for documents that contain "zen" and ("motorcycle" or "archery")
    * miniSearch.search({
    *   combineWith: 'AND',
@@ -1194,7 +1194,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Basic usage:
    *
-   * ```javaScript
+   * ```javascript
    * // Get suggestions for 'neuro':
    * miniSearch.autoSuggest('neuro')
    * // => [ { suggestion: 'neuromancer', terms: [ 'neuromancer' ], score: 0.46240 } ]
@@ -1202,7 +1202,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Multiple words:
    *
-   * ```javaScript
+   * ```javascript
    * // Get suggestions for 'zen ar':
    * miniSearch.autoSuggest('zen ar')
    * // => [
@@ -1213,7 +1213,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Fuzzy suggestions:
    *
-   * ```javaScript
+   * ```javascript
    * // Correct spelling mistakes using fuzzy search:
    * miniSearch.autoSuggest('neromancer', { fuzzy: 0.2 })
    * // => [ { suggestion: 'neuromancer', terms: [ 'neuromancer' ], score: 1.03998 } ]
@@ -1221,7 +1221,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Filtering:
    *
-   * ```javaScript
+   * ```javascript
    * // Get suggestions for 'zen ar', but only within the 'fiction' category
    * // (assuming that 'category' is a stored field):
    * miniSearch.autoSuggest('zen ar', {
@@ -1279,7 +1279,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Usage:
    *
-   * ```javaScript
+   * ```javascript
    * // If the index was serialized with:
    * let miniSearch = new MiniSearch({ fields: ['title', 'text'] })
    * miniSearch.addAll(documents)
@@ -1329,7 +1329,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Usage:
    *
-   * ```javaScript
+   * ```javascript
    * // Get default tokenizer
    * MiniSearch.getDefault('tokenize')
    *
@@ -1527,7 +1527,7 @@ var MiniSearch = class _MiniSearch {
    *
    * ### Usage:
    *
-   * ```javaScript
+   * ```javascript
    * // Serialize the index:
    * let miniSearch = new MiniSearch({ fields: ['title', 'text'] })
    * miniSearch.addAll(documents)

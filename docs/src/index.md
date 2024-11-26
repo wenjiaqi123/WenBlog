@@ -12,14 +12,17 @@ hero:
     alt: 闻
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: ExampleAdmin 项目
+      link: /ExampleAdmin
     - theme: alt
-      text: API Examples
-      link: /api-examples
-    - theme: brand
-      text: 简单后台管理模板
-      link: /api-examples
+      text: 起名网
+      link: /https://baobaoqiming.wen7.online
+    - theme: alt
+      text: 找规律网
+      link: /https://zhaoguilv.wen7.online
+    - theme: alt
+      text: GIS在线
+      link: /https://gisonline.wen7.online
 
 features:
   - title: Java
@@ -27,12 +30,20 @@ features:
       src: /home_feature_java.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: JavaScript
+    icon:
+      src: /home_feature_java.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Python
+    icon:
+      src: /home_feature_java.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Golang
+    icon:
+      src: /home_feature_java.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Shell
+    icon:
+      src: /home_feature_java.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
