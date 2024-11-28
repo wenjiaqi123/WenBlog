@@ -27,23 +27,23 @@ hero:
 features:
   - title: Java
     icon: 
-      src: /home_feature_java.svg
+      src: /home_feature_Java.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: JavaScript
     icon:
-      src: /home_feature_java.svg
+      src: /home_feature_JavaScript.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Python
     icon:
-      src: /home_feature_java.svg
+      src: /home_feature_Python.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Golang
     icon:
-      src: /home_feature_java.svg
+      src: /home_feature_Golang.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Shell
     icon:
-      src: /home_feature_java.svg
+      src: /home_feature_Shell.svg
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
