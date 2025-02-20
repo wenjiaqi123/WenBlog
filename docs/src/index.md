@@ -12,17 +12,17 @@ hero:
     alt: 闻
   actions:
     - theme: brand
-      text: ExampleAdmin 项目
-      link: /ExampleAdmin
+      text: QuickAdmin 项目
+      link: /https://quick.wen7.online
     - theme: alt
       text: 起名网
       link: /https://baobaoqiming.wen7.online
     - theme: alt
       text: 找规律网
-      link: /https://zhaoguilv.wen7.online
+      link: /https://zgl.wen7.online
     - theme: alt
       text: GIS在线
-      link: /https://gisonline.wen7.online
+      link: /https://gis.wen7.online
 
 features:
   - title: Java
